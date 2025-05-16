@@ -1,0 +1,107 @@
+{1 :hrsh7th/nvim-cmp
+ :denpendencies [;:onsails/lspkind.nvim
+                 :hrsh7th/cmp-path
+                 ;:hrsh7th/cmp-buffer
+                 ;:hrsh7th/cmp-cmdline
+                 ;:hrsh7th/cmp-nvim-lsp
+                 ;:hrsh7th/cmp-nvim-lsp-document-symbol
+                 ;:hrsh7th/cmp-nvim-lsp-signature-help
+                 ;:zbirenbaum/copilot-cmp
+                 {1 :L3MON4D3/LuaSnip}]
+
+                 
+ :opts (fn []
+          (vim.api.nvim_set_hl 0 :CmpGhostText {:default true :link :Comment})
+          
+          (local cmp (require :cmp))
+          (local luasnip (require :luasnip)) 
+          (local codicons {:Text "  "
+                           :Method "  "
+                           :Function "  "
+                           :Constructor "  " 
+                           :Field "  "
+                           :Variable "  "
+                           :Class "  "
+                           :Interface "  "
+                           :Module "  "
+                           :Property "  " 
+                           :Unit "  "
+                           :Value "  "
+                           :Enum "  "
+                           :Keyword "  "
+                           :Snippet "  "
+                           :Color "  "
+                           :File "  "
+                           :Reference "  "
+                           :Folder "  "
+                           :EnumMember "  "
+                           :Constant "  "
+                           :Struct "  "
+                           :Event "  "
+                           :Operator "  "
+                           :Copilot "  "
+                           :TypeParameter "  "})
+
+          ;; creates list with cmp sources i think
+          (local cmp-sources []) 
+          (table.insert cmp-sources {:name :luasnip :group_index 1}) 
+          (table.insert cmp-sources {:name :buffer :group_index 2}) 
+          (table.insert cmp-sources {:name :path :group_index 2})
+
+          (fn has-words-before []
+            (let [(line col) (unpack (vim.api.nvim_win_get_cursor 0))]
+              (and (not= col 0) (= (: (: (. (vim.api.nvim_buf_get_lines 0 (- line 1) line
+                                                                        true)
+                                            1) :sub col
+                                         col) :match "%s") nil))))
+
+          {:experimental {:ghost_text true}
+           :window {:documentation {:border :solid}
+                    :completion {:col_offset (- 3)
+                                 :side_padding 0
+                                 :winhighlight "Normal:NormalFloat,NormalFloat:Pmenu,Pmenu:NormalFloat"}}
+           :view {:entries {:name :custom :selection_order :near_cursor}}
+           :snippet {:expand (fn [args]
+                               (luasnip.lsp_expand args.body))}
+           :mapping {:<C-b> (cmp.mapping.scroll_docs -4)
+                     :<C-f> (cmp.mapping.scroll_docs 4)
+                     :<C-Space> (cmp.mapping.complete)
+                     :<C-p> (cmp.mapping.select_prev_item)
+                     :<C-n> (cmp.mapping.select_next_item)
+                     :<CR> (cmp.mapping.confirm {:behavior cmp.ConfirmBehavior.Insert
+                                                 :select false})
+                     :<C-e> (fn [fallback]
+                              (if (cmp.visible)
+                                  (do
+                                    (cmp.mapping.close)
+                                    (vim.cmd :stopinsert))
+                                  (fallback)))
+                     :<Tab> (cmp.mapping (fn [fallback]
+                                           (if (cmp.visible
+                                                 (cmp.select_prev_item)
+                                                 (luasnip.jumpable -1)
+                                                 (luasnip.jump -1)
+                                                 :else)
+                                               (fallback))
+                                           [:i :s :c]))
+                      :<S-Tab> (cmp.mapping (fn [fallback]
+                                              (if (cmp.visible
+                                                   (cmp.select_prev_item)
+                                                   (luasnip.jumpable -1)
+                                                   (luasnip.jump -1))
+                                                  :else (fallback)))
+                                            [:i :s :c])}
+           :sources cmp-sources
+           :formatting {:fields {1 :kind 2 :abbr 3 :menu}
+                        :format (fn [_ vim-item]
+                                  (set vim-item.menu vim-item.kind)
+                                  (set vim-item.kind (. codicons vim-item.kind))
+                                  vim-item)}})}
+
+                                             
+ 
+
+
+         
+                 
+

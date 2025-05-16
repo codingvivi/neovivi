@@ -1,0 +1,6 @@
+(import-macros {: setlocal!} :hibiscus.vim)
+(setlocal! indentexpr "") 
+(setlocal! smartindent false)
+(setlocal! autoindent true) 
+(setlocal! shiftwidth 4) 
+(setlocal! tabstop 4) 

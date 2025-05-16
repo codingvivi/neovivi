@@ -1,0 +1,12 @@
+{1 :rcarriga/nvim-dap-ui
+ :dependencies [:mfussenegger/nvim-dap :nvim-neotest/nvim-nio]
+ :opts {}
+ :config (fn [] (local (dap dapui) (values (require :dap) (require :dapui)))
+                (fn dap.listeners.before.attach.dapui_config [] (dapui.open))
+                (fn dap.listeners.before.launch.dapui_config [] (dapui.open))
+                (fn dap.listeners.before.event_terminated.dapui_config [] (dapui.close))
+                (fn dap.listeners.before.event_exited.dapui_config [] (dapui.close)))}   
+              
+
+ 
+

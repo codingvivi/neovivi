@@ -1,0 +1,16 @@
+(import-macros {: map!} :hibiscus.vim)
+
+{1 :ThePrimeagen/harpoon
+ :branch :harpoon2
+ :dependencies :nvim-lua/plenary.nvim
+ :config (fn []
+           (local harpoon (require :harpoon))
+           (harpoon:setup)
+           (map! [n] "<leader>1" (fn [] (: (harpoon:list) :select 1) "Select Harpoon buffer 1"))
+           (map! [n] "<leader>1" (fn [] (: (harpoon:list) :select 2) "Select Harpoon buffer 2"))
+           (map! [n] "<leader>1" (fn [] (: (harpoon:list) :select 3) "Select Harpoon buffer 3"))
+           (map! [n] "<leader>1" (fn [] (: (harpoon:list) :select 4) "Select Harpoon buffer 4"))
+           (map! [n] "<leader>ba" (fn [] (: (harpoon:list) :add) "add buffer to Harpoon"))
+           (map! [n] "<leader>bh" (fn [] (: (harpoon.ui:toggle_quick_menu (harpoon:list)) :add) "Open harpoon UI")))}
+
+

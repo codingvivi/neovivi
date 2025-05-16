@@ -1,4 +1,4 @@
--- :fennel:1747390478
+-- :fennel:1747434497
 local function _1_()
   local conform = require("conform")
   conform.setup({formatters_by_ft = {c = {"clang_format"}, cpp = {"clang_format"}, css = {"prettierd"}, html = {"prettierd"}, lua = {"stylua"}, markdown = {"prettierd"}, python = {"isort", "black"}, xml = {"xmlformatter"}}, formatters = {clang_format = {prepend_args = {"-style={BasedOnStyle: Google, BreakBeforeBraces: Allman}"}}}})

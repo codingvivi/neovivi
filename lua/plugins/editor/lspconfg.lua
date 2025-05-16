@@ -1,4 +1,4 @@
--- :fennel:1746469532
+-- :fennel:1747434497
 local function _1_()
   local lspconfig = require("lspconfig")
   lspconfig.fennel_ls.setup({})

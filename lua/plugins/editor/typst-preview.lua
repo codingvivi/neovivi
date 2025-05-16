@@ -1,2 +1,2 @@
--- :fennel:1743069251
+-- :fennel:1747434497
 return {"chomosuke/typst-preview.nvim", ft = "typst", version = "1.*", keys = {{"<localleader>p", "<cmd>TypstPreview <cr>", desc = "Start preview"}, {"<localleader>t", "<cmd>TypstPreview <cr>", desc = "Toggle preview"}, {"<localleader>u", "<cmd>TypstPreviewUpdate <cr>", desc = "Download/update preview binaries"}, {"<localleader>c", "<cmd>TypstPreviewFollowCursorToggle <cr>", desc = "Toggle cursor follow"}, {"<localleader>s", "<cmd>TypstPreviewSyncCursor <cr>", desc = "Sync cursor follow"}}, opts = {dependencies_bin = {tinymist = "tinymist"}, invert_colors = "auto"}}

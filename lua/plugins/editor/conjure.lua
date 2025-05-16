@@ -1,2 +1,2 @@
--- :fennel:1739673672
+-- :fennel:1747434497
 return {"Olical/conjure", lazy = true, ft = {"racket", "fennel", "python"}}

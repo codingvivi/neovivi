@@ -1,4 +1,4 @@
--- :fennel:1747393478
+-- :fennel:1747434497
 vim.keymap.set({"n"}, "<esc>", "<esc><cmd>noh<cr>", {desc = "No highlight escape", silent = true})
 vim.keymap.set({"n"}, "<leader>wx", "<C-w>x", {desc = "Swap windows", silent = true})
 vim.keymap.set({"n"}, "<leader>ws", "<cmd>split<CR>", {desc = "split window horizontally", silent = true})

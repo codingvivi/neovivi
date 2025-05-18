@@ -1,5 +1,5 @@
 (import-macros {: map!} :hibiscus.vim)
-;;(local harpoon (require :harpoon))
+;; (local harpoon (require :harpoon)) ;;testing
 
 (map! [n] :<esc> :<esc><cmd>noh<cr>  "No highlight escape")
 

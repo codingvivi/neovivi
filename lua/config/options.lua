@@ -1,9 +1,8 @@
--- :fennel:1747434497
+-- :fennel:1747632942
 vim.opt["updatetime"] = 250
 vim.opt["timeoutlen"] = 400
 vim.opt["number"] = true
 vim.opt["relativenumber"] = true
-vim.opt["colorcolumn"] = "80"
 vim.opt["cmdheight"] = 2
 vim.opt["laststatus"] = 3
 vim.opt["signcolumn"] = "yes:1"

@@ -7,7 +7,7 @@
 ;;ui 
 (set! number true)              ;; show line numbers
 (set! relativenumber true)      ;; show relative line numbers
-(set! colorcolumn :80)        ;; column that signifies 80 chars
+;;(set! colorcolumn :80)        ;; column that signifies 80 chars
 (set! cmdheight 2)               ;; commandline height
 (set! laststatus 3)              ;; one status line per vim instance
 (set! signcolumn "yes:1")       ;; column for notis (always there like this?)

@@ -2,7 +2,7 @@
  :config (fn [] 
           (local lspconfig (require :lspconfig))
           ;;(lspconfig.clangd.setup {})
-          (lspconfig.fennel_ls.setup {})
+          (lspconfig.fennel_ls.setup {:libraries {:nvim true}})
           ;;(lspconfig.fennel_language_server.setup {:filetypes [:fennel]
           ;;                                         :root_dir (lspconfig.util.root_pattern :fnl :lua)
           ;;                                         :single_file_support true

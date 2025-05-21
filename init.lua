@@ -24,7 +24,7 @@ local function bootstrap(url, ref)
         print(name .. ": finished installing")
     end
 end
-
+--vim.lsp.set_log_level("debug") -- Or even "trace" for maximum verbosity
 -- for git head
 bootstrap("https://github.com/udayvir-singh/tangerine.nvim")
 -- for git head
@@ -36,14 +36,24 @@ require("tangerine").setup({
   -- compile files in &rtp
   rtpdirs = {
     "ftplugin",
+		"~/.hammerspoon"
+
   },
 
   compiler = {
     -- disable popup showing compiled files
     verbose = false,
+		globals = (function()
+      local default_globals = vim.tbl_keys(_G) -- Get all keys from Neovim's global table
+      table.insert(default_globals, "hs")      -- Add "hs" to that list
+      -- You can add more custom globals here if needed in the future
+      -- table.insert(default_globals, "another_custom_global")
+      return default_globals
+    end)(),
 
     -- compile every time changed are made to fennel files or on entering vim
     hooks = { "onsave", "oninit" },
   },
   keymaps = {},
 })
+

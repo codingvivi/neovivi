@@ -1,7 +1,7 @@
--- :fennel:1747434497
+-- :fennel:1747727383
 local function _1_()
   local lspconfig = require("lspconfig")
-  lspconfig.fennel_ls.setup({})
+  lspconfig.fennel_ls.setup({libraries = {nvim = true}})
   lspconfig.lua_ls.setup({settings = {Lua = {diagnostics = {globals = {"vim"}}}}})
   return lspconfig.racket_langserver.setup({})
 end

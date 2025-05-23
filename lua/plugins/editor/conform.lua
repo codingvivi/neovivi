@@ -1,7 +1,7 @@
--- :fennel:1747434497
+-- :fennel:1747833335
 local function _1_()
   local conform = require("conform")
-  conform.setup({formatters_by_ft = {c = {"clang_format"}, cpp = {"clang_format"}, css = {"prettierd"}, html = {"prettierd"}, lua = {"stylua"}, markdown = {"prettierd"}, python = {"isort", "black"}, xml = {"xmlformatter"}}, formatters = {clang_format = {prepend_args = {"-style={BasedOnStyle: Google, BreakBeforeBraces: Allman}"}}}})
+  conform.setup({formatters_by_ft = {c = {"clang_format"}, cpp = {"clang_format"}, css = {"prettierd"}, html = {"prettierd"}, lua = {"stylua"}, fennel = {"fnlfmt"}, markdown = {"prettierd"}, python = {"isort", "black"}, xml = {"xmlformatter"}}, formatters = {clang_format = {prepend_args = {"-style={BasedOnStyle: Google, BreakBeforeBraces: Allman}"}}, fnlfmt = {command = "fnlfmt"}}})
   local function _2_()
     return conform.format({lsp_fallback = true, timeout_ms = 500, async = false})
   end

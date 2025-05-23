@@ -44,6 +44,7 @@
   "spring-boot.nvim": { "branch": "main", "commit": "218c0c26c14d99feca778e4d13f5ec3e8b1b60f0" },
   "tangerine.nvim": { "branch": "master", "commit": "885788fd96a2ac34e78dc4a58c1597494096f69c" },
   "typst-preview.nvim": { "branch": "master", "commit": "dea4525d5420b7c32eebda7de15a6beb9d6574fa" },
+  "vim-tmux-navigator": { "branch": "master", "commit": "0ecda542c0bd3ea26444044c7f03e469a6bb0bff" },
   "vimtex": { "branch": "master", "commit": "9d9f74c3ab073b70bc943279af1aa86075de632c" },
   "which-key.nvim": { "branch": "main", "commit": "370ec46f710e058c9c1646273e6b225acf47cbed" }
 }

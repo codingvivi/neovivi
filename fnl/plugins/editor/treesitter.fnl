@@ -17,8 +17,9 @@
                                         :python
                                         :lua
                         ;; lispin
-                                        :racket
+                                        :commonlisp
                                         :fennel
+                                        :racket
                         ;; webshit
                                         :css
                                         :javascript

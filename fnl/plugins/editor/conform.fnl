@@ -1,16 +1,18 @@
 {1 :stevearc/conform.nvim
  :config (fn []
            (local conform (require :conform))
-           (conform.setup {:formatters_by_ft {:c [:clang_format] 
+           (conform.setup {:formatters_by_ft {:c [:clang_format]
                                               :cpp [:clang_format]
                                               :css [:prettierd]
                                               :html [:prettierd]
                                               :lua [:stylua]
+                                              :fennel [:fnlfmt]
                                               :markdown [:prettierd]
                                               :python [:isort :black]
                                               ;:typst [:prettypst]
                                               :xml [:xmlformatter]}
-                           :formatters {:clang_format {:prepend_args ["-style={BasedOnStyle: Google, BreakBeforeBraces: Allman}"]}}})
+                           :formatters {:clang_format {:prepend_args ["-style={BasedOnStyle: Google, BreakBeforeBraces: Allman}"]}
+                                        :fnlfmt {:command :fnlfmt}}})
            (vim.keymap.set [:n] :<leader>cf
                            (fn []
                              (conform.format {:async false

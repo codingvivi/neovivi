@@ -36,7 +36,7 @@
                                         :tsv
                        ;;;; docs light
                                         :markdown
-                                        ;:org
+                                        :org
                         ;;;; docs heavy
                                         :latex
                                         :typst

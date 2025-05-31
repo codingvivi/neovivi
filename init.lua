@@ -46,6 +46,7 @@ require("tangerine").setup({
 		globals = (function()
       local default_globals = vim.tbl_keys(_G) -- Get all keys from Neovim's global table
       table.insert(default_globals, "hs")      -- Add "hs" to that list
+      table.insert(default_globals, "wallpaper-index")      -- Add "hs" to that list
       -- You can add more custom globals here if needed in the future
       -- table.insert(default_globals, "another_custom_global")
       return default_globals

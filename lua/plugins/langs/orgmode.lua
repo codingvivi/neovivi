@@ -1,2 +1,2 @@
--- :fennel:1747434497
-return {"nvim-orgmode/orgmode", event = "VeryLazy", ft = {"org"}, opts = {org_agenda_files = "~/org", org_default_notes_file = "~/org/refile.org"}}
+-- :fennel:1748702422
+return {"nvim-orgmode/orgmode", event = "VeryLazy", ft = {"org"}, opts = {org_agenda_files = "~/org", org_default_notes_file = "~/org/refile.org", org_todo_keyword_faces = {TODO = ":foreground #24a148 :weight bold", DONE = ":foreground #525252 :weight bold", IDEA = ":foreground #42be65 :weight bold", KILL = ":foreground #fa4d56 :weight bold", WAITING = ":foreground #f1c21b :weight bold"}, org_todo_keywords = {"TODO", "WAITING", "KILL", "DONE"}}}

@@ -1,62 +1,119 @@
 {1 :nvim-orgmode/orgmode
  :event :VeryLazy
  :ft [:org]
- :opts {:org_agenda_files "~/org"
+ :opts {:org_agenda_files "/Users/musicvivireal/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents/org"
         :org_default_notes_file "~/org/refile.org"
-        :org_todo_keyword_faces {:TODO ":foreground #24a148 :weight bold" ; for (color) overwrite
-                                 :DONE ":foreground #525252 :weight bold" 
-                                 :IDEA ":foreground #42be65 :weight bold" 
-                                 :KILL ":foreground #fa4d56 :weight bold" 
+        :org_todo_keyword_faces {:TODO ":foreground #42be65 :weight bold"
+                                 ; for (color) overwrite
+                                 :DONE ":foreground #525252 :weight bold"
+                                 :IDEA ":foreground #42be65 :weight bold"
+                                 :KILL ":foreground #fa4d56 :weight bold"
                                  :WAITING ":foreground #f1c21b :weight bold"}
-        :org_todo_keywords [:TODO
-                            :WAITING
-                            :KILL
-                            :DONE]}}
-                            ;:DELEGATED]}}
-
-        
-
-
-                                  
-
-
-;(local base00 "#161616")
-;(local base06 "#ffffff")
-;(local base09 "#78a9ff")
-;(local oxocarbon (or (and (= vim.o.background :dark)
-;                          {: base00
-;                           :base01 (blend-hex base00 base06 0.085)
-;                           :base02 (blend-hex base00 base06 0.18)
-;                           :base03 (blend-hex base00 base06 0.3)
-;                           :base04 (blend-hex base00 base06 0.82)
-;                           :base05 (blend-hex base00 base06 0.95)
-;                           : base06
-;                           :base07 "#08bdba"
-;                           :base08 "#3ddbd9"
-;                           : base09
-;                           :base10 "#ee5396"
-;                           :base11 "#33b1ff"
-;                           :base12 "#ff7eb6"
-;                           :base13 "#42be65"
-;                           :base14 "#be95ff"
-;                           :base15 "#82cfff"
-;                           :blend "#131313"
-;                           :none :NONE})
-;                     {:base00 base06
-;                      :base01 (blend-hex base00 base06 0.95)
-;                      :base02 (blend-hex base00 base06 0.82)
-;                      :base03 base00
-;                      :base04 "#37474F"
-;                      :base05 "#90A4AE"
-;                      :base06 "#525252"
-;                      :base07 "#08bdba"
-;                      :base08 "#ff7eb6"
-;                      :base09 "#ee5396"
-;                      :base10 "#FF6F00"
-;                      :base11 "#0f62fe"
-;                      :base12 "#673AB7"
-;                      :base13 "#42be65"
-;                      :base14 "#be95ff"
-;                      :base15 "#FFAB91"
-;                      :blend "#FAFAFA"
-;                      :none :NONE}))
+        :org_todo_keywords ["TODO(t)" :IDEA :WAITING :| :KILL :DONE]
+        ;:DELEGATED]}
+        :org_log_done :time
+        :org_log_repeat :time
+        :mappings {:agenda {:org_agenda_add_note :<prefix>na}
+                   ;:org_agenda_archive :<prefix>$
+                   ;:org_agenda_clock_cancel :X
+                   ;:org_agenda_clock_goto :<prefix>xj
+                   ;:org_agenda_clock_in :I
+                   ;:org_agenda_clock_out :O
+                   ;:org_agenda_clockreport_mode :R
+                   ;:org_agenda_day_view :vd
+                   ;:org_agenda_deadline :<prefix>id
+                   ;:org_agenda_earlier :b
+                   ;:org_agenda_filter "/"
+                   ;:org_agenda_goto :<TAB>
+                   ;:org_agenda_goto_date :J
+                   ;:org_agenda_goto_today "."
+                   ;:org_agenda_later :f
+                   ;:org_agenda_month_view :vm
+                   ;:org_agenda_priority "<prefix>,"
+                   ;:org_agenda_priority_down "-"
+                   ;:org_agenda_priority_up "+"
+                   ;:org_agenda_quit :q
+                   ;:org_agenda_redo :r
+                   ;:org_agenda_refile :<prefix>r
+                   ;:org_agenda_schedule :<prefix>is
+                   ;:org_agenda_set_effort :<prefix>xe
+                   ;:org_agenda_set_tags :<prefix>t
+                   ;:org_agenda_show_help :g?
+                   ;:org_agenda_switch_to :<CR>
+                   ;:org_agenda_todo :t
+                   ;:org_agenda_toggle_archive_tag :<prefix>A
+                   ;:org_agenda_week_view :vw
+                   ;:org_agenda_year_view :vy
+                   ;:capture {:org_capture_finalize :<C-c>
+                   ;          :org_capture_kill :<prefix>k
+                   ;          :org_capture_refile :<prefix>r
+                   ;          :org_capture_show_help :g?}
+                   ;:disable_all false
+                   ;:edit_src {:org_edit_src_abort :<prefix>k
+                   ;           :org_edit_src_save :<prefix>w
+                   ;           :org_edit_src_save_exit "<prefix>'"
+                   ;           :org_edit_src_show_help :g?}
+                   ;:global {:org_agenda :<prefix>a :org_capture :<prefix>c}
+                   ;:note {:org_note_finalize :<C-c> :org_note_kill :<prefix>k}
+                   :org {;:org_add_note :<prefix>na}
+                   ;      :org_archive_subtree :<prefix>$
+                   ;      :org_babel_tangle :<prefix>bt
+                   ;      :org_backward_heading_same_level "[["
+                   ;      :org_change_date :cid
+                   ;      :org_clock_cancel :<prefix>xq
+                   ;      :org_clock_goto :<prefix>xj
+                   ;      :org_clock_in :<prefix>xi
+                   ;      :org_clock_out :<prefix>xo
+                   ;      :org_cycle :<TAB>
+                         :org_deadline :<localleader>dd
+                   ;      :org_demote_subtree :>s
+                   ;      :org_do_demote ">>"
+                   ;      :org_do_promote "<<"
+                   ;      :org_edit_special "<prefix>'"
+                   ;      :org_export :<prefix>e
+                   ;      :org_forward_heading_same_level "]]"
+                   ;      :org_global_cycle :<S-TAB>
+                   ;      :org_insert_heading_respect_content :<prefix>ih
+                   ;      :org_insert_link :<prefix>li
+                   ;      :org_insert_todo_heading :<prefix>iT
+                   ;      :org_insert_todo_heading_respect_content :<prefix>it
+                         :org_meta_return :<S-CR>
+                   ;      :org_move_subtree_down :<prefix>J
+                   ;      :org_move_subtree_up :<prefix>K
+                   ;      :org_next_visible_heading "}"
+                   ;      :org_open_at_point :<prefix>o
+                   ;      :org_previous_visible_heading "{"
+                   ;      :org_priority "<prefix>,"
+                   ;      :org_priority_down :cir
+                   ;      :org_priority_up :ciR
+                   ;      :org_promote_subtree :<s
+                   ;      :org_refile :<prefix>r
+                   ;      :org_return :<CR>
+                         :org_schedule :<localleader>ds
+                   ;      :org_set_effort :<prefix>xe
+                   ;      :org_set_tags_command :<prefix>t
+                   ;      :org_show_help :g?
+                   ;      :org_store_link :<prefix>ls
+                         :org_time_stamp :<localleader>dt
+                   ;      :org_time_stamp_inactive :<prefix>i!
+                   ;      :org_timestamp_down :<C-x>
+                   ;      :org_timestamp_down_day :<S-DOWN>
+                   ;      :org_timestamp_up :<C-a>
+                   ;      :org_timestamp_up_day :<S-UP>
+                         :org_todo :<localleader>t}}}}
+                   ;      :org_todo_prev :ciT
+                   ;      :org_toggle_archive_tag :<prefix>A
+                   ;      :org_toggle_checkbox :<C-Space>
+                   ;      :org_toggle_heading :<prefix>*
+                   ;      :org_toggle_timestamp_type :<prefix>d!
+                   ;      :outline_up_heading "g{"}
+                   ;:org_return_uses_meta_return false
+                   ;:prefix :<Leader>o
+                   ;:text_objects {:around_heading :ah
+                   ;               :around_heading_from_root :OH
+                   ;               :around_subtree :ar
+                   ;               :around_subtree_from_root :OR
+                   ;               :inner_heading :ih
+                   ;               :inner_heading_from_root :Oh
+                   ;               :inner_subtree :ir
+                   ;               :inner_subtree_from_root :Or}}}}

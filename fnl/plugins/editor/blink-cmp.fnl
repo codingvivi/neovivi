@@ -7,7 +7,12 @@
                   :<S-Tab> [:select_prev :fallback]
                   :<Tab> [:select_next :fallback]}
                                  
-        :sources {:default [:lsp :path :snippets :buffer]}
+        :sources {:default [:lsp :path :snippets :buffer]
+                  :per_filetype {:org [:orgmode]}
+                  :providers {:orgmode {:name :Orgmode
+                                        :module :orgmode.org.autocompletion.blink
+                                        :fallbacks [:buffer]}}}
         :snippets {:preset :luasnip}}
+
  :opts_extend [:sources.default]
  :version :1.*} 

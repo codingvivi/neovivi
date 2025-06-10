@@ -2,6 +2,9 @@
   :lazy false
   :config (fn [] 
             (vim.cmd.colorscheme :oxocarbon))}
+            ;(vim.api.nvim_set_hl 0 "macro" {:fg "#fddc69"}))}
+            ;(vim.api.nvim_set_hl 0 "@property" {:fg "#ff7eb6"}))}
+
 
 
 ;(local base00 "#161616")

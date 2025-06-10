@@ -73,19 +73,19 @@
                    ;      :org_export :<prefix>e
                    ;      :org_forward_heading_same_level "]]"
                    ;      :org_global_cycle :<S-TAB>
-                   ;      :org_insert_heading_respect_content :<prefix>ih
+                         :org_insert_heading_respect_content :<localleader>h
                    ;      :org_insert_link :<prefix>li
                    ;      :org_insert_todo_heading :<prefix>iT
                    ;      :org_insert_todo_heading_respect_content :<prefix>it
-                         :org_meta_return :<S-CR>
+                         ;:org_meta_return :<S-CR>
                    ;      :org_move_subtree_down :<prefix>J
                    ;      :org_move_subtree_up :<prefix>K
                    ;      :org_next_visible_heading "}"
                    ;      :org_open_at_point :<prefix>o
                    ;      :org_previous_visible_heading "{"
-                   ;      :org_priority "<prefix>,"
-                   ;      :org_priority_down :cir
-                   ;      :org_priority_up :ciR
+                         :org_priority "<localleader>pp"
+                         :org_priority_down "<localleader>pu"
+                         :org_priority_up "<localleader>pd"
                    ;      :org_promote_subtree :<s
                    ;      :org_refile :<prefix>r
                    ;      :org_return :<CR>

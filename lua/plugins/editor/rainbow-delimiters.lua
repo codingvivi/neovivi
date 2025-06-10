@@ -1,4 +1,4 @@
--- :fennel:1747665648
+-- :fennel:1749400791
 local function _1_()
   local rainbow_delimiters = require("rainbow-delimiters")
   vim.g.rainbow_delimiters = {highlight = {"RainbowDelimiterCyan", "RainbowDelimiterOrange", "RainbowDelimiterBlue", "RainbowDelimiterGreen", "RainbowDelimiterViolet", "RainbowDelimiterYellow", "RainbowDelimiterRed"}}
@@ -10,4 +10,4 @@ local function _1_()
   vim.cmd("highlight RainbowDelimiterRed  guifg=#491d8b ctermfg=White")
   return vim.cmd("highlight RainbowDelimiterYellow  guifg=#fa4d56 ctermfg=White")
 end
-return {"HiPhish/rainbow-delimiters.nvim", event = {"BufReadPre", "BufNewFile"}, config = _1_}
+return {"HiPhish/rainbow-delimiters.nvim", event = {"BufReadPre", "BufNewFile"}, config = _1_, enabled = false}

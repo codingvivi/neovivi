@@ -1,4 +1,4 @@
--- :fennel:1747632942
+-- :fennel:1749205167
 vim.opt["updatetime"] = 250
 vim.opt["timeoutlen"] = 400
 vim.opt["number"] = true
@@ -6,7 +6,7 @@ vim.opt["relativenumber"] = true
 vim.opt["cmdheight"] = 2
 vim.opt["laststatus"] = 3
 vim.opt["signcolumn"] = "yes:1"
-vim.opt["mouse"] = "a"
+vim.opt["mouse"] = "c"
 vim.opt["splitkeep"] = "screen"
 vim.opt["clipboard"] = "unnamedplus"
 vim.opt["undofile"] = true

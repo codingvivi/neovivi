@@ -12,7 +12,7 @@
 (set! laststatus 3)              ;; one status line per vim instance
 (set! signcolumn "yes:1")       ;; column for notis (always there like this?)
 ;; input 
-(set! mouse "a")       ;; allow the mouse to be used in neovim, in command only
+(set! mouse "c")       ;; allow the mouse to be used in neovim, in command only
 ;;(set! mousescroll "ver:3,hor:6") ;;disable mouse scroll (git gud) (doesn't work on ghostty, prolly ghosttys fault
 (set! splitkeep :screen)    ;;keeps cursor in relative position during scroll
 (set! clipboard :unnamedplus) ;; yank from/paste to system clipboard

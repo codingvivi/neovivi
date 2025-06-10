@@ -1,7 +1,9 @@
 {1 :mfussenegger/nvim-dap
- :dependencies [:rcarriga/nvim-dap-ui
-                  :nvim-neotest/nvim-nio
-                  :williamboman/mason.nvim]
+ :event :VeryLazy
+ :dependencies [:folke/which-key.nvim
+                :rcarriga/nvim-dap-ui
+                :nvim-neotest/nvim-nio
+                :williamboman/mason.nvim]
  :config (fn [] (local dap (require :dap))
                 (local ui (require :dapui))
                 ((. (require :dapui) :setup))
@@ -17,10 +19,12 @@
                                               :stopOnEntry false
                                               :type :codelldb}])
                 (set dap.configurations.c dap.configurations.cpp)
-                (vim.keymap.set :n :<space>dt dap.toggle_breakpoint)
-                (vim.keymap.set :n :<space>dj dap.run_to_cursor)
-                (vim.keymap.set :n :<space>de (fn [] 
-                                                ((. (require :dapui) :eval) nil {:enter true}))) ;;eval under cursor
+                (local which-key (require :which-key))
+                (which-key.add [{1 :<leader>d :group "debug"}])
+                (vim.keymap.set :n :<leader>dt dap.toggle_breakpoint)
+                (vim.keymap.set :n :<leader>dj dap.run_to_cursor)
+                (vim.keymap.set :n :<leader>de (fn [] 
+                                                 ((. (require :dapui) :eval) nil {:enter true}))) ;;eval under cursor
                 (vim.keymap.set :n :dc dap.continue)
                 (vim.keymap.set :n :di dap.step_into)
                 (vim.keymap.set :n :da dap.step_over)
@@ -28,15 +32,15 @@
                 (vim.keymap.set :n :db dap.step_back)
                 (vim.keymap.set :n :dr dap.restart)
                 (vim.keymap.set :n :dq ui.close)
-
+      
                 (fn dap.listeners.before.attach.dapui_config [] (ui.open))
-
+      
                 (fn dap.listeners.before.launch.dapui_config [] (ui.open)))}
-
-               ;; (fn dap.listeners.before.event_terminated.dapui_config []
-               ;;       (ui.close))
-
-               ;; (fn dap.listeners.before.event_exited.dapui_config [] (ui.close)))}
+      
+                     ;; (fn dap.listeners.before.event_terminated.dapui_config []
+                     ;;       (ui.close))
+      
+                     ;; (fn dap.listeners.before.event_exited.dapui_config [] (ui.close)))}
  
   
               

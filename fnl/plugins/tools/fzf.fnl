@@ -1,10 +1,10 @@
 {1 :ibhagwan/fzf-lua 
   :dependencies :nvim-tree/nvim-web-devicons
   :opts {
-    :winopts {
+         :winopts {}}}
         ; :border :none
         ; :preview {:border :none}
-        }}
-}
+        
+
   
  

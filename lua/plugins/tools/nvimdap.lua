@@ -1,4 +1,4 @@
--- :fennel:1747434497
+-- :fennel:1749519592
 local function _1_()
   local dap = require("dap")
   local ui = require("dapui")
@@ -9,12 +9,14 @@ local function _1_()
   end
   dap.configurations.cpp = {{cwd = "${workspaceFolder}", name = "Launch file", program = _2_, request = "launch", type = "codelldb", stopOnEntry = false}}
   dap.configurations.c = dap.configurations.cpp
-  vim.keymap.set("n", "<space>dt", dap.toggle_breakpoint)
-  vim.keymap.set("n", "<space>dj", dap.run_to_cursor)
+  local which_key = require("which-key")
+  which_key.add({{"<leader>d", group = "debug"}})
+  vim.keymap.set("n", "<leader>dt", dap.toggle_breakpoint)
+  vim.keymap.set("n", "<leader>dj", dap.run_to_cursor)
   local function _3_()
     return require("dapui").eval(nil, {enter = true})
   end
-  vim.keymap.set("n", "<space>de", _3_)
+  vim.keymap.set("n", "<leader>de", _3_)
   vim.keymap.set("n", "dc", dap.continue)
   vim.keymap.set("n", "di", dap.step_into)
   vim.keymap.set("n", "da", dap.step_over)
@@ -30,4 +32,4 @@ local function _1_()
   end
   return dap.listeners.before.launch.dapui_config
 end
-return {"mfussenegger/nvim-dap", dependencies = {"rcarriga/nvim-dap-ui", "nvim-neotest/nvim-nio", "williamboman/mason.nvim"}, config = _1_}
+return {"mfussenegger/nvim-dap", event = "VeryLazy", dependencies = {"folke/which-key.nvim", "rcarriga/nvim-dap-ui", "nvim-neotest/nvim-nio", "williamboman/mason.nvim"}, config = _1_}

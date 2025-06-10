@@ -1,4 +1,5 @@
 {1 :HiPhish/rainbow-delimiters.nvim
+ :enabled false
  :event [:BufReadPre :BufNewFile]
  :config (fn []
            (local rainbow-delimiters (require :rainbow-delimiters))

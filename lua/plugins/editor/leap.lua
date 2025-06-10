@@ -1,4 +1,4 @@
--- :fennel:1747434497
+-- :fennel:1749555954
 local function _1_()
   return require("leap").create_default_mappings()
 end

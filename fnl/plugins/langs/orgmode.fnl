@@ -1,5 +1,6 @@
 {1 :nvim-orgmode/orgmode
- :event :VeryLazy
+ ;:event :VeryLazy
+ :keys [:<leader>oa :<leader>oc] 
  :ft [:org]
  :opts {:org_agenda_files "/Users/musicvivireal/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents/org"
         :org_default_notes_file "~/org/refile.org"

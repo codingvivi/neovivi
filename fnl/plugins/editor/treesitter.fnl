@@ -1,5 +1,7 @@
 {1 :nvim-treesitter/nvim-treesitter
-          ; :event :BufReadPost 
+          :lazy false
+          ;:event :VeryLazy
+          ;:cmd :FzfLua
           ; :dependencies [:nvim-treesitter/nvim-treesitter-textobjects]
           :build ":TSUpdate"
           :config (fn []

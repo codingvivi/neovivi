@@ -1,4 +1,5 @@
 {1 :saghen/blink.cmp
+ :event [:InsertEnter :CmdlineEnter]
  :dependencies [:L3MON4D3/LuaSnip]
  :opts {:appearance {:nerd_font_variant :mono}
         :completion {:documentation {:auto_show false}}

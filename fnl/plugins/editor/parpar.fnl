@@ -1,4 +1,11 @@
 {1 :dundalek/parpar.nvim
- :event :VeryLazy
+ :ft [:lisp 
+      :fennel
+      :clojure 
+      :janet
+      :racket 
+      :hy
+      :guile]
+      
   :dependencies [:gpanders/nvim-parinfer :julienvincent/nvim-paredit]
   :opts {}}

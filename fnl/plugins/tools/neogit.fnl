@@ -1,5 +1,6 @@
 {1 :NeogitOrg/neogit
- :event :VeryLazy
+ :cmd [:Neogit]
+ ;:keys [:<leader>gg :<leader>gcc]
  :dependencies [:nvim-lua/plenary.nvim        ;; required
                 :sindrets/diffview.nvim ;;optional
                 :ibhagwan/fzf-lua]             ;; optional

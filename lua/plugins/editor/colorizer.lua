@@ -1,2 +1,2 @@
--- :fennel:1747434497
-return {"catgoose/nvim-colorizer.lua", event = "BufReadPre", opts = {}}
+-- :fennel:1749555876
+return {"catgoose/nvim-colorizer.lua", event = "VeryLazy", opts = {}}

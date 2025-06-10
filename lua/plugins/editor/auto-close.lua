@@ -1,2 +1,2 @@
--- :fennel:1747434497
-return {"m4xshen/autoclose.nvim", opts = {keys = {["$"] = {close = true, enabled_filetypes = {markdown = "tex"}, escape = true, pair = "$$"}}}}
+-- :fennel:1749555630
+return {"m4xshen/autoclose.nvim", event = {"BufReadPre", "BufNewFile"}, opts = {disable_when_touch = true, keys = {["$"] = {close = true, enabled_filetypes = {"markdown", "tex", "typst"}, escape = true, pair = "$$"}}}, enabled = false}

@@ -1,6 +1,6 @@
--- :fennel:1749522909
+-- :fennel:1749554467
 local which_key_groups = {}
-table.insert(which_key_groups, {mode = {"n", "v"}, [3] = {"[", group = "previous"}, [5] = {"]", group = "next"}, [7] = {"g", group = "go"}, [9] = {"z", group = "view, spell"}, [11] = {"<leader>", group = "leader", icon = "\243\176\140\147"}, [13] = {"<leader>m", group = "local leader", icon = "\243\176\140\147"}})
+table.insert(which_key_groups, {mode = {"n", "v"}, [3] = {"[", group = "previous"}, [5] = {"]", group = "next"}, [7] = {"g", group = "go"}, [9] = {"z", group = "view, spell"}, [11] = {"<leader>", group = "leader"}, [13] = {"<leader>m", group = "local leader"}})
 vim.keymap.set({"n"}, "<esc>", "<esc><cmd>noh<cr>", {desc = "No highlight escape", silent = true})
 vim.keymap.set({"n"}, "gr", "gd[{V%%::s/<CR>///gc<Left><Left><Left>", {desc = "Replace definition locally", silent = true})
 vim.keymap.set({"n"}, "gR", "gD:%%s/<CR>///gc<Left><Left><Left>", {desc = "Replace definition locally", silent = true})

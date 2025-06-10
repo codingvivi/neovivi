@@ -1,4 +1,5 @@
 {1 :stevearc/conform.nvim
+ :event [:BufReadPre :BufNewFile]
  :config (fn []
            (local conform (require :conform))
            (conform.setup {:formatters_by_ft {:c [:clang_format]
@@ -18,5 +19,5 @@
                              (conform.format {:async false
                                               :lsp_fallback true
                                               :timeout_ms 500}))
-                           {:desc "Format file or range (in visual mode)"}))
- :event [:BufReadPre :BufNewFile]}
+                           {:desc "Format file or range (in visual mode)"}))}
+ 

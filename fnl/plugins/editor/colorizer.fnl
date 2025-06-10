@@ -1,4 +1,4 @@
 {1 :catgoose/nvim-colorizer.lua
- :event :BufReadPre
+ :event :VeryLazy
  :opts {}}
  

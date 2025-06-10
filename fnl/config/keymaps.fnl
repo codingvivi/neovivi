@@ -7,8 +7,8 @@
                5 {1 "]" :group "next"}
                7 {1 "g" :group "go"}
                9 {1 "z" :group "view, spell"}
-               11 {1 :<leader> :group "leader" :icon "󰌓"}
-               13 {1 :<leader>m :group "local leader" :icon "󰌓"}})
+               11 {1 :<leader> :group "leader"} ;:icon ""}})
+               13 {1 :<leader>m :group "local leader"}}) ;:icon ""}})
 
 ;; (local harpoon (require :harpoon)) ;;testing
 

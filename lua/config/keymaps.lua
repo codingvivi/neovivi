@@ -1,6 +1,6 @@
--- :fennel:1749520588
+-- :fennel:1749522909
 local which_key_groups = {}
-table.insert(which_key_groups, {"<leader>m", group = "local leader", icon = "\243\176\140\147"})
+table.insert(which_key_groups, {mode = {"n", "v"}, [3] = {"[", group = "previous"}, [5] = {"]", group = "next"}, [7] = {"g", group = "go"}, [9] = {"z", group = "view, spell"}, [11] = {"<leader>", group = "leader", icon = "\243\176\140\147"}, [13] = {"<leader>m", group = "local leader", icon = "\243\176\140\147"}})
 vim.keymap.set({"n"}, "<esc>", "<esc><cmd>noh<cr>", {desc = "No highlight escape", silent = true})
 vim.keymap.set({"n"}, "gr", "gd[{V%%::s/<CR>///gc<Left><Left><Left>", {desc = "Replace definition locally", silent = true})
 vim.keymap.set({"n"}, "gR", "gD:%%s/<CR>///gc<Left><Left><Left>", {desc = "Replace definition locally", silent = true})
@@ -35,8 +35,9 @@ table.insert(which_key_groups, {"<leader>h", group = "help (& cmd search)"})
 vim.keymap.set({"n"}, "<leader>ht", "<cmd>FzfLua colorschemes<CR>", {desc = "search and preview themes", silent = true})
 table.insert(which_key_groups, {"<leader>hb", group = "bindings"})
 vim.keymap.set({"n"}, "<leader>hbf", "<cmd>FzfLua keymaps<CR>", {desc = "search keymaps", silent = true})
+vim.keymap.set({"n"}, "<leader>hbt", "<cmd>WhichKey<CR>", {desc = "show which-key help", silent = true})
 vim.keymap.set({"n"}, "<leader>hx", "<cmd>FzfLua commands<CR>", {desc = "search commands", silent = true})
-table.insert(which_key_groups, {"<leader>g", group = "neogit"})
+table.insert(which_key_groups, {"<leader>g", group = "git"})
 vim.keymap.set({"n"}, "<leader>gg", "<cmd>Neogit<CR>", {desc = "Open Neogit", silent = true})
 vim.keymap.set({"n"}, "<leader>gcc", "<cmd>Neogit<CR>", {desc = "Create commit", silent = true})
 table.insert(which_key_groups, {"<leader>s", group = "search"})

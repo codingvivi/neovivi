@@ -1,5 +1,6 @@
 {1 :NeogitOrg/neogit
- :cmd [:Neogit]
+ :event :VeryLazy ;; Speed up startup
+ ;:cmd [:Neogit] ;; makes opening slow
  ;:keys [:<leader>gg :<leader>gcc]
  :dependencies [:nvim-lua/plenary.nvim        ;; required
                 :sindrets/diffview.nvim ;;optional

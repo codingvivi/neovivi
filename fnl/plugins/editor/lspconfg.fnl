@@ -1,5 +1,6 @@
 {1 :neovim/nvim-lspconfig
- :event [:BufReadPre :BufNewFile]
+ :event :VeryLazy
+ ;:event [:BufReadPre :BufNewFile]
  :config (fn [] 
           (local lspconfig (require :lspconfig))
           ;;(lspconfig.clangd.setup {})

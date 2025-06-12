@@ -1,4 +1,5 @@
-(when vim.g.neovide (import-macros {: g!} :hibiscus.vim)
+(when vim.g.neovide (require-macros :hibiscus.vim)
+                    (set! guifont "SF Mono")
                      ;; display 
                     (g! :neovide_scale_factor 0.8)
                     (g! :neovide_refresh_rate 120)

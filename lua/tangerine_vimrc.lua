@@ -1,4 +1,4 @@
--- :fennel:1747434497
+-- :fennel:1749736185
 require("config.globals")
 require("config.neovide")
 require("config.lazy")

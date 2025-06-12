@@ -1,4 +1,4 @@
--- :fennel:1749554467
+-- :fennel:1749730435
 local which_key_groups = {}
 table.insert(which_key_groups, {mode = {"n", "v"}, [3] = {"[", group = "previous"}, [5] = {"]", group = "next"}, [7] = {"g", group = "go"}, [9] = {"z", group = "view, spell"}, [11] = {"<leader>", group = "leader"}, [13] = {"<leader>m", group = "local leader"}})
 vim.keymap.set({"n"}, "<esc>", "<esc><cmd>noh<cr>", {desc = "No highlight escape", silent = true})
@@ -56,6 +56,6 @@ vim.keymap.set({"n"}, "<leader>qL", "<cmd>:source ~/.local/state/nvim/lastsessio
 vim.keymap.set({"n"}, "<leader>qs", "<cmd>:mksession! lastlocalsession<CR><cmd>:qa<CR>", {desc = "Save session in cwd and quit", silent = true})
 vim.keymap.set({"n"}, "<leader>qS", "<cmd>:mksession! ~/.local/state/nvim/lastsession<CR>", {desc = "Save session in .local/state and quit", silent = true})
 vim.keymap.set({"n"}, "<leader>qq", "<cmd>:qa<CR>", {desc = "Quit all", silent = true})
-vim.keymap.set({"n"}, "<leader>qQ", "<cmd>:qa!<CR>", {desc = "Save and quit all", silent = true})
+vim.keymap.set({"n"}, "<leader>qQ", "<cmd>:qa!<CR>", {desc = "Quit all without saving", silent = true})
 local which_key = require("which-key")
 return which_key.add(which_key_groups)

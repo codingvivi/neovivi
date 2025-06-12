@@ -124,7 +124,7 @@
       "Save session in .local/state and quit")
 
 (map! [n] :<leader>qq "<cmd>:qa<CR>" "Quit all")
-(map! [n] :<leader>qQ "<cmd>:qa!<CR>" "Save and quit all")
+(map! [n] :<leader>qQ "<cmd>:qa!<CR>" "Quit all without saving")
 
 (local which-key (require :which-key))
 (which-key.add which-key-groups)

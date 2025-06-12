@@ -1,7 +1,7 @@
 {1 :nvim-orgmode/orgmode
  ;:event :VeryLazy
- :keys [:<leader>oa :<leader>oc] 
- :ft [:org]
+ ;:keys [:<leader>oa :<leader>oc] 
+ ;:ft [:org]
  :opts {:org_agenda_files "/Users/musicvivireal/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents/org"
         :org_default_notes_file "~/org/refile.org"
         :org_todo_keyword_faces {:TODO ":foreground #42be65 :weight bold"

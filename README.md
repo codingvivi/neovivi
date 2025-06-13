@@ -1,6 +1,6 @@
 # neovivi
 My neovim config. Clone it 4 urself if any of these activate ur almonds:
-- Uses Fennel-Lisp (via [tangerine](https://github.com/udayvir-singh/tangerine.nvim) and [hibiscus](https://github.com/udayvir-singh/hibiscus.nvim)
+- Uses Fennel-Lisp (via [tangerine](https://github.com/udayvir-singh/tangerine.nvim) and [hibiscus](https://github.com/udayvir-singh/hibiscus.nvim) )
 - [oxocarbon](https://github.com/nyoom-engineering/oxocarbon.nvim) themed w/ additional color adjustment by me so it looks clean af。Colors are mapped to the theme as well so if you ever wanna change your theme go right ahead, you wont have to unset a million things. Toggleable transparency with [transparent.nvim](https://github.com/xiyaowong/transparent.nvim)
 - [lazy](https://github.com/folke/lazy.nvim) for plugin management. Figured out which plugins to lazy-load when to minimize startup & file loading and which ones will break for no reason so you are spared banging your head against the wall
 - [Doom-Emacs](https://github.com/doomemacs/doomemacs)-esque, space-as-a-leader keymaps based on easy to remember mnemonics

@@ -13,7 +13,7 @@ My neovim config. Clone it 4 urself if any of these activate ur almonds:
     - [neogit](https://github.com/NeogitOrg/neogit) for git-ing
     - [oil](https://github.com/stevearc/oil.nvim) for file browsing
     - even has debugging with [nvim-dap](https://github.com/mfussenegger/nvim-dap) but thats kinda busted rn sorry
-- Good LISP editing i'd say (˘ ˘ ˘)
+- Good lisp editing i'd say (˘ ˘ ˘)
     - [conjure](https://github.com/Olical/conjure) as a REPL
     -  [parpar.nvim](https://github.com/dundalek/parpar.nvim) for parentheses-editing.
     - [fennel-ls](https://sr.ht/~xerool/fennel-ls/) is set up as an lsp with documentation for neovim and hibiscus enabled

@@ -13,7 +13,9 @@ My neovim config. Clone it 4 urself if any of these activate ur almonds:
     - [neogit](https://github.com/NeogitOrg/neogit) for git-ing
     - [oil](https://github.com/stevearc/oil.nvim) for file browsing
     - even has debugging with [nvim-dap](https://github.com/mfussenegger/nvim-dap) but thats kinda busted rn sorry
-- Lisp editing with [conjure](https://github.com/Olical/conjure) as a REPL and [parpar.nvim](https://github.com/dundalek/parpar.nvim) for parentheses-editing.
+- Good LISP editing i'd say (˘ ˘ ˘)
+    - [conjure](https://github.com/Olical/conjure) as a REPL
+    -  [parpar.nvim](https://github.com/dundalek/parpar.nvim) for parentheses-editing.
     - [fennel-ls](https://sr.ht/~xerool/fennel-ls/) is set up as an lsp with documentation for neovim and hibiscus enabled
 - Typst setup including live preview for superior document creation if you are a student or into that otherwise (I have vimtex installed as well but latex sucks just switch to tpyst please)
 - [nvim-orgmode](https://github.com/nvim-orgmode/orgmode) and [obsidian-nvim](https://github.com/epwalsh/obsidian.nvim) for notes, pick your poison

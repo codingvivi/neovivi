@@ -38,6 +38,7 @@
             ;Addeds
             (vim.api.nvim_set_hl 0 "Added" {:fg "#42be65"})
             (vim.api.nvim_set_hl 0 "DiffAdded" {:fg "#42be65"})
+            (vim.api.nvim_set_hl 0 "NeogitChangeModified" {:fg "#42be65"})
 
             ;Infos
             (vim.api.nvim_set_hl 0 "DiagnosticInfo" {:fg "#33b1ff"})
@@ -81,6 +82,9 @@
 ;            (vim.api.nvim_set_hl 0 "@org.priority.low" {:fg "#525252"})
             (vim.api.nvim_set_hl 0 "@org.priority.lowest" {:fg "#f2f2f2"})
 
+            (vim.api.nvim_set_hl 0 "@markup.list" {:fg "#78a9ff"})
+            (vim.api.nvim_set_hl 0 :OrgBulletsDash {:link "@markup.list"})
+
             (vim.api.nvim_set_hl 0 "@org.plan" {:link "Keyword"})
             (vim.api.nvim_set_hl 0 "@markup.link" {:link "markdownUrl"}))}
 
@@ -89,8 +93,8 @@
             ;(vim.api.nvim_set_hl 0 "@property" {:fg "#ff7eb6"}))}
 
 
-;base00: "#161616" # Default Background
-;base01: "#282828" # Lighter Background (Used for status bars, line number and folding marks)
+;base00: "#161616" # 00 - Default Background
+;base01: "#282828" # 01 - Lighter Background (Used for status bars, line number and folding marks)
 ;base02: "#404040" # Selection Background
 ;base03: "#525252" # Comments, Invisibles, Line Highlighting
 ;base04: "#aaaaaa" # Dark Foreground (Used for status bars)
@@ -98,11 +102,12 @@
 ;base06: "#f2f2f2" # Light Foreground (Not often used)
 ;base07: "#ffffff" # Light Background (Not often used)
 ;
-;base08: "#78aaff" # Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted
-;base09: "#82cfff" # Integers, Boolean, Constants, XML Attributes, Markup Link Url
-;base0A: "#ee5296" # Classes, Markup Bold, Search Text Background
-;base0B: "#be96ff" # Strings, Inherited Class, Markup Code, Diff Inserted
-;base0C: "#08bdba" # Support, Regular Expressions, Escape Characters, Markup Quotes
-;base0D: "#ff7eb6" # Functions, Methods, Attribute IDs, Headings
-;base0E: "#33b0ff" # Keywords, Storage, Selector, Markup Italic, Diff Changed
-;base0F: "#3ddbda" # Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?>
+;base08: "#78aaff" # 09 - Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted
+;base09: "#82cfff" # 15 - Integers, Boolean, Constants, XML Attributes, Markup Link Url
+;base0A: "#ee5296" # 10 - Classes, Markup Bold, Search Text Background
+;base0B: "#be96ff" # 14 - Strings, Inherited Class, Markup Code, Diff Inserted
+;base0C: "#08bdba" # 07 - Support, Regular Expressions, Escape Characters, Markup Quotes
+;base0D: "#ff7eb6" # 12 - Functions, Methods, Attribute IDs, Headings
+;base0E: "#33b0ff" # 11 - Keywords, Storage, Selector, Markup Italic, Diff Changed
+;base0F: "#3ddbda" # 08 - Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php ?>
+;base1F: "#42be65" # 13 - 

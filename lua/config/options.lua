@@ -1,4 +1,4 @@
--- :fennel:1749205167
+-- :fennel:1749784985
 vim.opt["updatetime"] = 250
 vim.opt["timeoutlen"] = 400
 vim.opt["number"] = true

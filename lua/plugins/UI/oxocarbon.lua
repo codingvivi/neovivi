@@ -1,4 +1,4 @@
--- :fennel:1749770039
+-- :fennel:1749846265
 local function _1_()
   vim.cmd.colorscheme("oxocarbon")
   vim.api.nvim_set_hl(0, "ErrorMsg", {fg = "#fa4d56"})
@@ -26,6 +26,7 @@ local function _1_()
   vim.api.nvim_set_hl(0, "HealthSuccess", {fg = "#42be65"})
   vim.api.nvim_set_hl(0, "Added", {fg = "#42be65"})
   vim.api.nvim_set_hl(0, "DiffAdded", {fg = "#42be65"})
+  vim.api.nvim_set_hl(0, "NeogitChangeModified", {fg = "#42be65"})
   vim.api.nvim_set_hl(0, "DiagnosticInfo", {fg = "#33b1ff"})
   vim.api.nvim_set_hl(0, "NotifyINFOBorder", {fg = "#33b1ff"})
   vim.api.nvim_set_hl(0, "NotifyINFOIcon", {fg = "#33b1ff"})
@@ -46,6 +47,8 @@ local function _1_()
   vim.api.nvim_set_hl(0, "@org.priority.highest", {fg = "#fa4d56"})
   vim.api.nvim_set_hl(0, "@org.priority.default", {fg = "#fddc69"})
   vim.api.nvim_set_hl(0, "@org.priority.lowest", {fg = "#f2f2f2"})
+  vim.api.nvim_set_hl(0, "@markup.list", {fg = "#78a9ff"})
+  vim.api.nvim_set_hl(0, "OrgBulletsDash", {link = "@markup.list"})
   vim.api.nvim_set_hl(0, "@org.plan", {link = "Keyword"})
   return vim.api.nvim_set_hl(0, "@markup.link", {link = "markdownUrl"})
 end

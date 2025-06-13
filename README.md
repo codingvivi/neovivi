@@ -1,3 +1,11 @@
 # neovivi
-My neovim config. 
-Uses Tangerine and Hibiscus for Fennel.
+My neovim config. Clone it 4 urself if any of these activate ur almonds:
+- Uses Fennel-Lisp (via [tangerine](https://github.com/udayvir-singh/tangerine.nvim) and [hibiscus](https://github.com/udayvir-singh/hibiscus.nvim)
+- [oxocarbon](https://github.com/nyoom-engineering/oxocarbon.nvim) themed w/ additional color adjustment by me so it looks clean af。Colors are mapped to the theme as well so if you ever wanna change your theme go right ahead, you wont have to unset a million things. Toggleable transparency with [transparent.nvim](https://github.com/xiyaowong/transparent.nvim)
+- [lazy](https://github.com/folke/lazy.nvim) for plugin management. Figured out which plugins to lazy-load when to minimize startup & file loading and which ones will break for no reason so you are spared banging your head against the wall
+- [Doom-Emacs](https://github.com/doomemacs/doomemacs)-esque, space-as-a-leader keymaps based on easy to remember mnemonics
+- basic functionality already set up with [fzf-lua](https://github.com/ibhagwan/fzf-lua) for search, [blink-cmp](https://github.com/Saghen/blink.cmp) for completion (which is better than nvim-cmp and cross compatible anyway), treesitter, LSPs with [mason-lspconfig](https://github.com/mason-org/mason-lspconfig.nvim), [conform.nvim](https://github.com/stevearc/conform.nvim) for code formatting, [neogit](https://github.com/NeogitOrg/neogit) for git-ing and [oil](https://github.com/stevearc/oil.nvim) for file browsing. Even has debugging with [nvim-dap](https://github.com/mfussenegger/nvim-dap) but thats kinda busted rn sorry
+- Lisp editing with [conjure](https://github.com/Olical/conjure) as a REPL and [parpar.nvim](https://github.com/dundalek/parpar.nvim) for parentheses-editing
+- Typst setup including live preview for superior document creation if you are a student or into that otherwise (I have vimtex installed as well but latex sucks just switch to tpyst please)
+- [nvim-orgmode](https://github.com/nvim-orgmode/orgmode) and [obsidian-nvim](https://github.com/epwalsh/obsidian.nvim) for notes, pick your poison
+- other stuff as well idk check it out

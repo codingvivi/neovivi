@@ -17,6 +17,6 @@ My neovim config. Clone it 4 urself if any of these activate ur almonds:
     - [conjure](https://github.com/Olical/conjure) as a REPL
     -  [parpar.nvim](https://github.com/dundalek/parpar.nvim) for parentheses-editing.
     - [fennel-ls](https://sr.ht/~xerool/fennel-ls/) is set up as an lsp with documentation for neovim and hibiscus enabled
-- Typst setup including live preview for superior document creation if you are a student or into that otherwise (I have vimtex installed as well but latex sucks just switch to tpyst please)
+- [Typst](https://github.com/typst/typst) setup including [live preview](https://github.com/chomosuke/typst-preview.nvim) for superior document creation if you are a student or into that stuff otherwise (I have vimtex installed as well but latex sucks just switch to tpyst please)
 - [nvim-orgmode](https://github.com/nvim-orgmode/orgmode) and [obsidian-nvim](https://github.com/epwalsh/obsidian.nvim) for notes, pick your poison
 - other stuff as well idk check it out

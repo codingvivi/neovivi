@@ -10,7 +10,7 @@ My neovim config. Clone it 4 urself if any of these activate ur almonds:
     - treesitter
     - LSPs with [mason-lspconfig](https://github.com/mason-org/mason-lspconfig.nvim)
     - [conform.nvim](https://github.com/stevearc/conform.nvim) for code formatting
-    - [neogit](https://github.com/NeogitOrg/neogit) for git-ing
+    - [neogit](https://github.com/NeogitOrg/neogit) for git-ing that rivals magit
     - [oil](https://github.com/stevearc/oil.nvim) for file browsing
     - even has debugging with [nvim-dap](https://github.com/mfussenegger/nvim-dap) but thats kinda busted rn sorry
 - Good lisp editing i'd say (˘ ˘ ˘)

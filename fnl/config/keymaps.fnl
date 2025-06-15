@@ -52,12 +52,14 @@
 
 ;; ------------------------------ f - file stuff -------------------------------
 (table.insert which-key-groups {1 :<leader>f :group :file})
+(map! [n] :<leader>f. "<cmd>FzfLua files cwd=~/<CR>"
+      "Find in personal neovim config")
 (map! [n] :<leader>fC "<cmd>%y+<CR>" "Copy file contents")
 
 (map! [n] :<leader>fD :<cmd>bw<CR> "Delete this file")
 
 (map! [n] :<leader>ff "<cmd>FzfLua files<CR>" "Find file")
-;; personal config
+;; personal neovim config
 (map! [n] :<leader>fp "<cmd>FzfLua files cwd=~/.config/nvim/<CR>"
       "Find in personal neovim config")
 
@@ -77,21 +79,26 @@
 
 (map! [n] :- "<cmd>Oil<CR>" "Open file browser")
 
-;;  ------------------------------------ h - [h]elp ---------------------------
-(table.insert which-key-groups {1 :<leader>h :group "help (& cmd search)"})
-(map! [n] :<leader>ht "<cmd>FzfLua colorschemes<CR>"
-      "search and preview themes")
-
-(table.insert which-key-groups {1 :<leader>hb :group "bindings"})
-(map! [n] :<leader>hbf "<cmd>FzfLua keymaps<CR>" "search keymaps")
-(map! [n] :<leader>hbt "<cmd>WhichKey<CR>" "show which-key help")
-(map! [n] "<leader>hx" "<cmd>FzfLua commands<CR>" "search commands")
-
 ;; ----------------------------------- g - [g]it ---------------------------------- 
 (table.insert which-key-groups {1 :<leader>g :group "git"})
 (map! [n] :<leader>gg "<cmd>Neogit<CR>" "Open Neogit")
 (map! [n] :<leader>gcc "<cmd>Neogit<CR>" "Create commit")
 
+;;  ------------------------------------ h - [h]elp ---------------------------
+(table.insert which-key-groups {1 :<leader>h :group "help (& cmd search)"})
+(map! [n] :<leader>ht "<cmd>FzfLua colorschemes<CR>"
+      "search and preview themes")
+(map! [n] :<leader>hT "<cmd>Hardtime toggle<CR>"
+      "Toggle hardtime mode")
+(table.insert which-key-groups {1 :<leader>hb :group "bindings"})
+(map! [n] :<leader>hbf "<cmd>FzfLua keymaps<CR>" "search keymaps")
+(map! [n] :<leader>hbt "<cmd>WhichKey<CR>" "show which-key help")
+(map! [n] "<leader>hx" "<cmd>FzfLua commands<CR>" "search commands")
+
+;; ------------------------------- n - org roam [n]ode -----------------------------
+(table.insert which-key-groups {1 :<leader>n :group "roam"})
+;; ----------------------------------- o - [o]rg ---------------------------------- 
+(table.insert which-key-groups {1 :<leader>o :group "org"})
 ;; m - local leader
 ;;;; typst
 

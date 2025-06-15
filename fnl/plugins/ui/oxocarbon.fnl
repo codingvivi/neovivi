@@ -57,15 +57,26 @@
             (vim.api.nvim_set_hl 0 "WhichKeyIconRed" {:fg "#ee5396"})
 
 
-            (vim.api.nvim_set_hl 0 "@org.headline.level1" {:fg "#ff7eb6" :bold true :underline false})
-            (vim.api.nvim_set_hl 0 "@org.headline.level2" {:fg "#be95ff" :bold true :underline false})
-            (vim.api.nvim_set_hl 0 "@org.headline.level3" {:fg "#78a9ff" :bold true :underline false})
-            (vim.api.nvim_set_hl 0 "@org.headline.level4" {:fg "#3ddbd9" :bold true :underline false})
-            (vim.api.nvim_set_hl 0 "@org.headline.level5" {:fg "#ffffff" :bold true :underline false})
-            (vim.api.nvim_set_hl 0 "@org.headline.level6" {:fg "#33b1ff" :bold true :underline false})
-            (vim.api.nvim_set_hl 0 "@org.headline.level7" {:fg "#08bdba" :bold true :underline false})
-            (vim.api.nvim_set_hl 0 "@org.headline.level7" {:fg "#ee5396" :bold true :underline false})
+;            (vim.api.nvim_set_hl 0 "@org.headline.level1" {:fg "#ff7eb6" :bold true :underline false})
+;            (vim.api.nvim_set_hl 0 "@org.headline.level2" {:fg "#ffdc69" :bold true :underline false})
+;            (vim.api.nvim_set_hl 0 "@org.headline.level3" {:fg "#33b0ff" :bold true :underline false})
+;            (vim.api.nvim_set_hl 0 "@org.headline.level4" {:fg "#f2f2f2" :bold true :underline false})
+;            (vim.api.nvim_set_hl 0 "@org.headline.level5" {:fg "#f2f2f2" :bold true :underline false})
+;            (vim.api.nvim_set_hl 0 "@org.headline.level6" {:fg "#33b1ff" :bold true :underline false})
+;            (vim.api.nvim_set_hl 0 "@org.headline.level7" {:fg "#08bdba" :bold true :underline false})
+;            (vim.api.nvim_set_hl 0 "@org.headline.level7" {:fg "#ee5396" :bold true :underline false})
             
+
+            (vim.api.nvim_set_hl 0 "@org.headline.level1" {:fg "#ff7eb6" :bold true :underline false})
+            (vim.api.nvim_set_hl 0 "@org.headline.level2" {:fg "#ffafd2" :bold true :underline false})
+            (vim.api.nvim_set_hl 0 "@org.headline.level3" {:fg "#ffd6e8" :bold true :underline false})
+            (vim.api.nvim_set_hl 0 "@org.headline.level4" {:fg "#fff0f7" :bold true :underline false})
+            (vim.api.nvim_set_hl 0 "@org.headline.level5" {:fg "#fff0f7" :bold true :underline false})
+;            (vim.api.nvim_set_hl 0 "@org.headline.level4" {:fg "#fff0f7" :bold true :underline false})
+;            (vim.api.nvim_set_hl 0 "@org.headline.level5" {:fg "#ffe0ef" :bold true :underline false})
+;            (vim.api.nvim_set_hl 0 "@org.headline.level6" {:fg "#ff94c3" :bold true :underline false})
+;            (vim.api.nvim_set_hl 0 "@org.headline.level7" {:fg "#ff7eb6" :bold true :underline false})
+;            (vim.api.nvim_set_hl 0 "@org.headline.level8" {:fg "#e3176f" :bold true :underline false})
 
 ;            (vim.api.nvim_set_hl 0 "@org.headline.level1" {:fg "#ff7eb6" :bold true :underline false})
 ;            (vim.api.nvim_set_hl 0 "@org.headline.level2" {:fg "#ff7eb6" :bold true :underline false})
@@ -78,7 +89,7 @@
 
             (vim.api.nvim_set_hl 0 "@org.priority.highest" {:fg "#fa4d56"})
 ;            (vim.api.nvim_set_hl 0 "@org.priority.high" {:fg "#fddc69"})
-            (vim.api.nvim_set_hl 0 "@org.priority.default" {:fg "#fddc69"})
+            (vim.api.nvim_set_hl 0 "@org.priority.default" {:fg "#f1c21b"})
 ;            (vim.api.nvim_set_hl 0 "@org.priority.low" {:fg "#525252"})
             (vim.api.nvim_set_hl 0 "@org.priority.lowest" {:fg "#f2f2f2"})
 
@@ -86,12 +97,23 @@
             (vim.api.nvim_set_hl 0 :OrgBulletsDash {:link "@markup.list"})
 
             (vim.api.nvim_set_hl 0 "@org.plan" {:link "Keyword"})
-            (vim.api.nvim_set_hl 0 "@markup.link" {:link "markdownUrl"}))}
+            (vim.api.nvim_set_hl 0 "@markup.link" {:link "markdownUrl"})
+
+            (vim.api.nvim_set_hl 0 "@org.timestamp.active" {:fg "#82cfff"})
+
+            (vim.api.nvim_set_hl 0 "@org.keyword.face.TODO" {:fg "#42be65"})
+            (vim.api.nvim_set_hl 0 "@org.keyword.face.DONE" {:fg "#525252"})
+            (vim.api.nvim_set_hl 0 "@org.keyword.face.IDEA" {:fg "#42be65"})
+            (vim.api.nvim_set_hl 0 "@org.keyword.face.KILL" {:fg "#fa4d56"})
+            (vim.api.nvim_set_hl 0 "@org.keyword.face.WAITING" {:fg "#f1c21b"})
 
             
             ;(vim.api.nvim_set_hl 0 "macro" {:fg "#fddc69"}))}
             ;(vim.api.nvim_set_hl 0 "@property" {:fg "#ff7eb6"}))}
 
+
+
+            (vim.api.nvim_set_hl 0 "@org.plan" {:link "Keyword"}))}
 
 ;base00: "#161616" # 00 - Default Background
 ;base01: "#282828" # 01 - Lighter Background (Used for status bars, line number and folding marks)

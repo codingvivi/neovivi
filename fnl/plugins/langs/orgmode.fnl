@@ -2,8 +2,14 @@
  ;:event :VeryLazy
  ;:keys [:<leader>oa :<leader>oc] 
  ;:ft [:org]
- :opts {:org_agenda_files "~/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents/org/**/*"
-        :org_default_notes_file "~/org/refile.org"
+ :opts {:org_default_notes_file "~/org/refile.org"
+        :org_log_done :time
+        :org_log_repeat :time
+        :org_startup_indented true
+        :org_blank_before_new_entry {:heading false :plain_list_item false}
+        ;; Agenda
+        :org_agenda_files "~/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents/org/**/*"
+        :org_agenda_span :month
         ;; Custom views
         :org_agenda_custom_commands {:r {:description "Record digging stuff"
                                          :types [{:org_agenda_overriding_header "Record-digging"
@@ -21,7 +27,11 @@
                                                   :match "+personal"}
                                                  {:org_agenda_overriding_header "Untagged"
                                                   :type :tags_todo
-                                                  :match "{$^}"}]}}
+                                                  :match "{$^}"}]}
+                                     :p {:description ":pleading:"
+                                         :types [{:org_agenda_overriding_header "Tagged :gf:"
+                                                  :type :tags_todo
+                                                  :match "gf"}]}}
         ;                                                  :org_agenda_tag_filter_preset :personal}]}}
         ;; Keyword faces
         :org_todo_keyword_faces {:TODO ":foreground #42be65 :weight bold"
@@ -32,10 +42,6 @@
                                  :WAITING ":foreground #f1c21b :weight bold"}
         :org_todo_keywords ["TODO(t)" :IDEA :WAITING :| :KILL :DONE]
         ;:DELEGATED]}
-        :org_log_done :time
-        :org_log_repeat :time
-        :org_startup_indented true
-        :org_blank_before_new_entry {:heading false :plain_list_item false}
         ; Mappings
         :mappings {:agenda {:org_agenda_add_note :<prefix>na}
                    ;:org_agenda_archive :<prefix>$

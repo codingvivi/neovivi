@@ -1,4 +1,8 @@
-(import-macros {: map!} :hibiscus.vim)
+(import-macros {: setlocal!} :hibiscus.vim)
+
+(setlocal! wrap true)
+(setlocal! linebreak true)
+(setlocal! breakindent true)
 
 ; Headline colors
 ;(vim.api.nvim_set_hl 0 "@org.headline.level1" {:fg "#ff7eb6" :bold true :underline false})

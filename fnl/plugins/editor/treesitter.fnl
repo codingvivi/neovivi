@@ -26,6 +26,8 @@
                                                            :typescript
                                                            ;; scriptin
                                                            :bash
+                                                           ;;db 
+                                                           :sql
                                                            ;; plaintext
                                                            ;;; markup
                                                            ;;;; misc

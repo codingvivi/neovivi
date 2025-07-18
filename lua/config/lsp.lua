@@ -1,3 +1,4 @@
--- :fennel:1747434497
+-- :fennel:1750952891
 vim.diagnostic.config({virtual_text = true})
-return vim.lsp.enable({"clangd", "jdtls", "racket_langserver", "basedpyright", "lemminx", "tinymist"})
+vim.lsp.config("sqls", {})
+return vim.lsp.enable({"clangd", "jdtls", "racket_langserver", "basedpyright", "sqls", "lemminx", "tinymist"})

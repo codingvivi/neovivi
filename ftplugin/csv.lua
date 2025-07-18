@@ -1,2 +1,2 @@
--- :fennel:1749560320
-return vim.keymap.set({"n"}, "<localleader>t", "<cmd>CsvViewToggle <cr>", {desc = "Toggle table view", silent = true})
+-- :fennel:1751038215
+return vim.keymap.set({"n"}, "<localleader>t", "<cmd>CsvViewToggle <cr>", {desc = "Start preview", silent = true})

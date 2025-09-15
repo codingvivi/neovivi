@@ -1,4 +1,4 @@
--- :fennel:1749784985
+-- :fennel:1757507993
 vim.opt["updatetime"] = 250
 vim.opt["timeoutlen"] = 400
 vim.opt["number"] = true
@@ -32,4 +32,6 @@ vim.opt["foldexpr"] = "nvim_treesitter#foldexpr()"
 vim.opt["hidden"] = true
 vim.opt["splitbelow"] = true
 vim.opt["splitright"] = true
+vim.opt["exrc"] = true
+vim.opt["secure"] = true
 return nil

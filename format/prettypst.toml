@@ -1,0 +1,5 @@
+[automatic-newline]
+max-width = 80
+
+[block]
+long-block-style = "separate"

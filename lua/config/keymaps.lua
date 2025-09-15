@@ -1,9 +1,8 @@
--- :fennel:1749988484
+-- :fennel:1756395795
 local which_key_groups = {}
-table.insert(which_key_groups, {mode = {"n", "v"}, [3] = {"[", group = "previous"}, [5] = {"]", group = "next"}, [7] = {"g", group = "go"}, [9] = {"z", group = "view, spell"}, [11] = {"<leader>", group = "leader"}, [13] = {"<leader>m", group = "local leader"}})
+table.insert(which_key_groups, {mode = {"n", "v"}, [3] = {"[", group = "previous"}, [5] = {"]", group = "next"}, [7] = {"g", group = "go"}, [9] = {"z", group = "view, spell"}, [11] = {"<leader>", group = "leader"}, [13] = {"<leader>m", group = "local leader"}, [15] = {"<leader>cd", group = "code dividors"}})
 vim.keymap.set({"n"}, "<esc>", "<esc><cmd>noh<cr>", {desc = "No highlight escape", silent = true})
-vim.keymap.set({"n"}, "gr", "gd[{V%%::s/<CR>///gc<Left><Left><Left>", {desc = "Replace definition locally", silent = true})
-vim.keymap.set({"n"}, "gR", "gD:%%s/<CR>///gc<Left><Left><Left>", {desc = "Replace definition locally", silent = true})
+vim.keymap.set({"n"}, "-", "<cmd>Oil<CR>", {desc = "Open file browser", silent = true})
 vim.keymap.set({"n"}, "<leader><space>", "<cmd>FzfLua files<CR>", {desc = "TODO find project", silent = true})
 vim.keymap.set({"n"}, "<leader>'", "<cmd>FzfLua resume<CR>", {desc = "Resume last search", silent = true})
 vim.keymap.set({"n"}, "<leader>/", "<cmd>FzfLua live_grep<CR>", {desc = "Search project", silent = true})
@@ -17,6 +16,8 @@ vim.keymap.set({"n"}, "<leader>bn", "<cmd>bnext<CR>", {desc = "Next buffer", sil
 vim.keymap.set({"n"}, "<leader>bd", "<cmd>q<CR>", {desc = "Kill buffer", silent = true})
 table.insert(which_key_groups, {"<leader>c", group = "code"})
 vim.keymap.set({"n"}, "<leader>cc", "<cmd>make<CR>", {desc = "compile code", silent = true})
+vim.keymap.set({"n"}, "<leader>cy", "<cmd>%y+<CR>", {desc = "yank file text", silent = true})
+vim.keymap.set({"n"}, "<leader>ch", "<cmd>Stdheader<CR>", {desc = "Insert file header", silent = true})
 table.insert(which_key_groups, {"<leader>f", group = "file"})
 vim.keymap.set({"n"}, "<leader>f.", "<cmd>FzfLua files cwd=~/<CR>", {desc = "Find in personal neovim config", silent = true})
 vim.keymap.set({"n"}, "<leader>fC", "<cmd>%y+<CR>", {desc = "Copy file contents", silent = true})
@@ -31,7 +32,6 @@ vim.keymap.set({"n"}, "<leader>fas", "<cmd>wa<CR>", {desc = "Save all files", si
 vim.keymap.set({"n"}, "<leader>fq", "<cmd>q<CR>", {desc = "Quit file", silent = true})
 vim.keymap.set({"n"}, "<leader>fy", "<cmd>let @+ = expand('%')<CR>", {desc = "Yank replative path", silent = true})
 vim.keymap.set({"n"}, "<leader>fY", "<cmd>let @+ = expand('%:p')<CR>", {desc = "Yank full path", silent = true})
-vim.keymap.set({"n"}, "-", "<cmd>Oil<CR>", {desc = "Open file browser", silent = true})
 table.insert(which_key_groups, {"<leader>g", group = "git"})
 vim.keymap.set({"n"}, "<leader>gg", "<cmd>Neogit<CR>", {desc = "Open Neogit", silent = true})
 vim.keymap.set({"n"}, "<leader>gcc", "<cmd>Neogit<CR>", {desc = "Create commit", silent = true})

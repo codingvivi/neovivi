@@ -1,5 +1,5 @@
-{:cmd [:clangd]
- :filetypes [:c :cpp]
+{:cmd [:clangd :--background-index :--clang-tidy]
+ :filetypes [:h :c :cpp]
  :root_markers [:.clangd
                 :.clang-tidy
                 :.clang-format
@@ -7,5 +7,3 @@
                 :compile_flags.txt
                 :configure.ac
                 :.git]}
-
- 

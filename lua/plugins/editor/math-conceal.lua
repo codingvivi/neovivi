@@ -1,2 +1,2 @@
--- :fennel:1752689785
-return {"pxwg/math-conceal.nvim", build = "make lua51", event = "VeryLazy", main = "math-conceal", opts = {conceal = {"greek", "script", "math", "font", "delim", "phy"}, enabled = true, ft = {"*.tex", "*.md", "*.typ"}}}
+-- :fennel:1754509419
+return {"pxwg/math-conceal.nvim", build = "make lua51", event = "VeryLazy", main = "math-conceal", opts = {conceal = {"greek", "script", "math", "font", "delim", "phy"}, enabled = true, ft = {"*.tex", "*.md", "*.typ"}}, enabled = false}

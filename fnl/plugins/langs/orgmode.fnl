@@ -14,13 +14,13 @@
         :org_agenda_custom_commands {:r {:description "Record digging stuff"
                                          :types [{:org_agenda_overriding_header "Record-digging"
                                                   :type :tags_todo
-                                                  :match "+rdig"}
+                                                  :match "+dig"}
                                                  {:org_agenda_overriding_header "ID-ing"
                                                   :type :tags_todo
                                                   :match "+ID"}
                                                  {:org_agenda_overriding_header "Record-getting"
                                                   :type :tags_todo
-                                                  :match "+rget"}]}
+                                                  :match "+get"}]}
                                      :p {:description "Personal tasks"
                                          :types [{:org_agenda_overriding_header "Unfinished tasks"
                                                   :type :tags_todo
@@ -28,10 +28,19 @@
                                                  {:org_agenda_overriding_header "Untagged"
                                                   :type :tags_todo
                                                   :match "{$^}"}]}
-                                     :p {:description ":pleading:"
+                                     :g {:description ":pleading:"
                                          :types [{:org_agenda_overriding_header "Tagged :gf:"
                                                   :type :tags_todo
-                                                  :match "gf"}]}}
+                                                  :match "gf"}]}
+                                     :o {:description "Larporator stuff"
+                                         :types [{:org_agenda_overriding_header "Tagged idk"
+                                                  :type :tags_todo
+                                                  :match "42h"}]}
+                                     :4 {:description "42 prep"
+                                         :types [{:org_agenda_overriding_header "Tagged :42school:"
+                                                  :type :tags_todo
+                                                  :match "42school"}]}}
+        ;                                                  :org_agenda_tag_filter_preset :personal}]}}
         ;                                                  :org_agenda_tag_filter_preset :personal}]}}
         ;; Keyword faces
         :org_todo_keyword_faces {:TODO ":foreground #42be65 :weight bold"

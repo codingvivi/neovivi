@@ -1,2 +1,2 @@
--- :fennel:1749903777
-return {"nvim-lualine/lualine.nvim", dependencies = {"nvim-tree/nvim-web-devicons"}, opts = {["component-separators"] = {left = " ", right = " "}, ["section-separators"] = {left = " ", right = " "}}}
+-- :fennel:1754308643
+return {"nvim-lualine/lualine.nvim", dependencies = {"nvim-tree/nvim-web-devicons"}, opts = {["component-separators"] = "|", ["section-separators"] = "|", sections = {lualine_a = {"mode"}, lualine_b = {"branch", "diff", "diagnostics"}, lualine_c = {"filename"}, lualine_x = {"encoding", "fileformat", "filetype"}, lualine_y = {"progress"}, lualine_z = {"location"}}}}

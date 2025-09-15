@@ -1,4 +1,4 @@
-{1 :saghen/blink.cmp 
+{1 :saghen/blink.cmp
  :event [:InsertEnter :CmdlineEnter]
  :dependencies [:L3MON4D3/LuaSnip]
  :opts {:appearance {:nerd_font_variant :mono}
@@ -8,8 +8,8 @@
                                    :components {:kind_icon {:text (fn [ctx] (.. " " ctx.kind_icon ctx.icon_gap " "))}}}}} 
         :fuzzy {:implementation :prefer_rust_with_warning}
         :keymap {:preset :enter
-                 :<S-Tab> [:select_prev :fallback]
-                 :<Tab> [:select_next :fallback]}
+                 :<S-Tab> [:select_prev :snippet_forward :fallback]
+                 :<Tab> [:select_next :snippet_backward :fallback]}
                                  
         :sources {:default [:lsp 
                             :path 

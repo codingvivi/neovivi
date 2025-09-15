@@ -1,5 +1,5 @@
 {1 :m4xshen/autoclose.nvim
- :event [ :BufReadPre :BufNewFile ]
+ :event [ :BufReadPre :BufNewFile]
  :enabled false
  :opts {:disable_when_touch true 
         :keys {:$ {:close true 

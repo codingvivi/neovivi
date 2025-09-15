@@ -26,6 +26,9 @@
 
            (local color_warn "#f1c21b")
            (local color_error "#fa4d56")
+          
+;           (vim.api.nvim_set_hl 0 "FzfLuaScrollFloatEmpty"   {:fg "#d0d0d0" :bg "#262626"})
+ ;          (vim.api.nvim_set_hl 0 "FzfLuaScrollFloatFull"   {:fg "#82cfff" :bg "#262626"})
 
            (vim.api.nvim_set_hl 0 "BlinkCmpKind"   {:fg "#262626" :bg "#78a9ff"})
            (vim.api.nvim_set_hl 0 "BlinkCmpKindText" {:fg "#262626" :bg color_text})

@@ -1,4 +1,4 @@
--- :fennel:1749736504
+-- :fennel:1757507984
 if vim.g.neovide then
   vim.opt["guifont"] = "SF Mono"
   vim.g["neovide_scale_factor"] = 0.8

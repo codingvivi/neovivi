@@ -1,4 +1,4 @@
-(import-macros {: map!} :hibiscus.vim)
+(import-macros {: map! } :hibiscus.vim)
 ;;(set! foldmethod :indent)
 
 (map! [n] :<localleader>p "<cmd>TypstPreview <cr>"  "Start preview")

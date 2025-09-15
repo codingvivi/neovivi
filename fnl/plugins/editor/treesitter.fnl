@@ -12,7 +12,9 @@
                                                           [;; langs
                                                            :c
                                                            :cpp
+                                                           :cmake
                                                            :rust
+                                                           :ron
                                                            :java
                                                            :python
                                                            :lua

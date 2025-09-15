@@ -1,2 +1,2 @@
--- :fennel:1749563447
-return {"nvim-java/nvim-java", ft = {"java"}, opts = {}}
+-- :fennel:1757508211
+return {"nvim-java/nvim-java", ft = {"java"}, opts = {}, enabled = false}

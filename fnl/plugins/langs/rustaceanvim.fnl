@@ -1,1 +1,5 @@
-{1 :mrcjkb/rustaceanvim :version :^6 :lazy false}
+{1 :mrcjkb/rustaceanvim
+ :version :^6
+ :dependencies [:mfussenegger/nvim-dap :rcarriga/nvim-dap-ui]
+ :enabled true
+ :lazy false}

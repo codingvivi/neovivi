@@ -1,6 +1,7 @@
--- :fennel:1757507993
+-- :fennel:1758024412
 vim.opt["updatetime"] = 250
 vim.opt["timeoutlen"] = 400
+vim.opt["guicursor"] = "n-v-c-sm-i-ci-ve:block,a:blinkwait700-blinkoff400-blinkon250"
 vim.opt["number"] = true
 vim.opt["relativenumber"] = true
 vim.opt["cmdheight"] = 2

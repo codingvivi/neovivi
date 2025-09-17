@@ -20,13 +20,13 @@
                   :stopOnEntry false
                   :type :codelldb}])
            (set dap.configurations.c dap.configurations.cpp)
+           (set dap.configurations.rust dap.configurations.cpp)
            (local which-key (require :which-key))
            (which-key.add [{1 :<leader>d :group "debug"}])
            (import-macros {: map!} :hibiscus.vim)
            (map! [n] :<leader>dt dap.toggle_breakpoint "Toggle Breakpoint")
            (map! [n] :<leader>dj dap.run_to_cursor "Run to cursor")
-           (map! [n] 
-                 :<leader>de
+           (map! [n] :<leader>de
                  (fn []
                    ((. (require :dapui) :eval) nil {:enter true}))
                  "eval under cursor")

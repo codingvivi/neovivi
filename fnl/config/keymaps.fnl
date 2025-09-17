@@ -37,6 +37,13 @@
 ;                             non-leader mappings                              ;
 ; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ;
 (map! [n] :- "<cmd>Oil<CR>" "Open file browser")
+(table.insert which-key-groups {1 :gr :group "LSP"})
+(map! [n] :grn #(vim.lsp.buf.rename) "Rename symbol")
+(map! [nv] :gra #(vim.lsp.buf.code_action) "Choose code action")
+(map! [n] :grr #(vim.lsp.buf.references) "List symbol refs")
+(map! [n] :gri #(vim.lsp.buf.implementation) "List implementations")
+(map! [n] :grt #(vim.lsp.buf.type_definition) "Goto type definition")
+(map! [n] :gO #(vim.lsp.buf.document_symbol) "List all symbols")
 ; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ;
 ;                               leader mappings                                ;
 ; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ;
@@ -101,7 +108,10 @@
 (map! [n] :<leader>hbf "<cmd>FzfLua keymaps<CR>" "search keymaps")
 (map! [n] :<leader>hbt "<cmd>WhichKey<CR>" "show which-key help")
 (map! [n] "<leader>hx" "<cmd>FzfLua commands<CR>" "search commands")
-
+; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ l - [l]azy ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ;
+(table.insert which-key-groups {1 :<leader>l :group "plugins"})
+(map! [n] :<leader>ll "<cmd>Lazy<CR>" "Open Lazy")
+(map! [n] :<leader>lm "<cmd>Mason<CR>" "Open Mason")
 ;; ------------------------------- n - org roam [n]ode -----------------------------
 (table.insert which-key-groups {1 :<leader>n :group "roam"})
 ;; ----------------------------------- o - [o]rg ---------------------------------- 

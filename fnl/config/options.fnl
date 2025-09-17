@@ -4,6 +4,7 @@
 (set! updatetime 250)
 (set! timeoutlen 400)
 
+(set! guicursor "n-v-c-sm-i-ci-ve:block,a:blinkwait700-blinkoff400-blinkon250")
 ;; time wating before key combo gets executed?
 ;;ui 
 (set! number true)
@@ -51,7 +52,7 @@
 ;; so that `` is visible in markdown files
 (set! showtabline 1)
 
-;;(set! 2" always show tabs, "1" for only when >=2 tabs
+;;(set! 2" always show tabs, "1" for only when >=2 tabs))
 (set! termguicolors true)
 (set! wrap false)
 

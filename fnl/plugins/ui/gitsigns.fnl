@@ -1,3 +1,1 @@
-{1 :lewis6991/gitsigns.nvim
- :opts {}}
- 
+{1 :lewis6991/gitsigns.nvim :enabled true :opts {}}

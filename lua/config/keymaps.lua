@@ -1,8 +1,33 @@
--- :fennel:1756395795
+-- :fennel:1758092025
 local which_key_groups = {}
 table.insert(which_key_groups, {mode = {"n", "v"}, [3] = {"[", group = "previous"}, [5] = {"]", group = "next"}, [7] = {"g", group = "go"}, [9] = {"z", group = "view, spell"}, [11] = {"<leader>", group = "leader"}, [13] = {"<leader>m", group = "local leader"}, [15] = {"<leader>cd", group = "code dividors"}})
 vim.keymap.set({"n"}, "<esc>", "<esc><cmd>noh<cr>", {desc = "No highlight escape", silent = true})
 vim.keymap.set({"n"}, "-", "<cmd>Oil<CR>", {desc = "Open file browser", silent = true})
+table.insert(which_key_groups, {"gr", group = "LSP"})
+local function _1_()
+  return vim.lsp.buf.rename()
+end
+vim.keymap.set({"n"}, "grn", _1_, {desc = "Rename symbol", silent = true})
+local function _2_()
+  return vim.lsp.buf.code_action()
+end
+vim.keymap.set({"n", "v"}, "gra", _2_, {desc = "Choose code action", silent = true})
+local function _3_()
+  return vim.lsp.buf.references()
+end
+vim.keymap.set({"n"}, "grr", _3_, {desc = "List symbol refs", silent = true})
+local function _4_()
+  return vim.lsp.buf.implementation()
+end
+vim.keymap.set({"n"}, "gri", _4_, {desc = "List implementations", silent = true})
+local function _5_()
+  return vim.lsp.buf.type_definition()
+end
+vim.keymap.set({"n"}, "grt", _5_, {desc = "Goto type definition", silent = true})
+local function _6_()
+  return vim.lsp.buf.document_symbol()
+end
+vim.keymap.set({"n"}, "gO", _6_, {desc = "List all symbols", silent = true})
 vim.keymap.set({"n"}, "<leader><space>", "<cmd>FzfLua files<CR>", {desc = "TODO find project", silent = true})
 vim.keymap.set({"n"}, "<leader>'", "<cmd>FzfLua resume<CR>", {desc = "Resume last search", silent = true})
 vim.keymap.set({"n"}, "<leader>/", "<cmd>FzfLua live_grep<CR>", {desc = "Search project", silent = true})
@@ -42,6 +67,9 @@ table.insert(which_key_groups, {"<leader>hb", group = "bindings"})
 vim.keymap.set({"n"}, "<leader>hbf", "<cmd>FzfLua keymaps<CR>", {desc = "search keymaps", silent = true})
 vim.keymap.set({"n"}, "<leader>hbt", "<cmd>WhichKey<CR>", {desc = "show which-key help", silent = true})
 vim.keymap.set({"n"}, "<leader>hx", "<cmd>FzfLua commands<CR>", {desc = "search commands", silent = true})
+table.insert(which_key_groups, {"<leader>l", group = "plugins"})
+vim.keymap.set({"n"}, "<leader>ll", "<cmd>Lazy<CR>", {desc = "Open Lazy", silent = true})
+vim.keymap.set({"n"}, "<leader>lm", "<cmd>Mason<CR>", {desc = "Open Mason", silent = true})
 table.insert(which_key_groups, {"<leader>n", group = "roam"})
 table.insert(which_key_groups, {"<leader>o", group = "org"})
 table.insert(which_key_groups, {"<leader>s", group = "search"})

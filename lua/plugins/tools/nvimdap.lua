@@ -1,4 +1,4 @@
--- :fennel:1753366154
+-- :fennel:1758087332
 local function _1_()
   local dap = require("dap")
   local ui = require("dapui")
@@ -9,6 +9,7 @@ local function _1_()
   end
   dap.configurations.cpp = {{cwd = "${workspaceFolder}", name = "Launch file", program = _2_, request = "launch", type = "codelldb", stopOnEntry = false}}
   dap.configurations.c = dap.configurations.cpp
+  dap.configurations.rust = dap.configurations.cpp
   local which_key = require("which-key")
   which_key.add({{"<leader>d", group = "debug"}})
   vim.keymap.set({"n"}, "<leader>dt", dap.toggle_breakpoint, {desc = "Toggle Breakpoint", silent = true})

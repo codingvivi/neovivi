@@ -1,8 +1,2 @@
--- :fennel:1757697018
-local function _1_()
-  require("nvim-treesitter.configs").setup({highlight = {enable = true}}, "ensure_installed", {"c", "cpp", "cmake", "rust", "ron", "java", "python", "lua", "commonlisp", "fennel", "racket", "css", "javascript", "typescript", "bash", "sql", "xml", "toml", "yaml", "csv", "tsv", "markdown", "org", "latex", "typst", "mermaid", "vimdoc"})
-  local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
-  parser_config.org = {install_info = {files = {"src/parser.c", "src/scanner.c"}, url = "https://github.com/milisims/tree-sitter-org"}, filetype = "org"}
-  return nil
-end
-return {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate", config = _1_, lazy = false}
+-- :fennel:1758115373
+return {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate", main = "nvim-treesitter.configs", opts = {ensure_installed = {"bash", "c", "cmake", "cpp", "css", "csv", "fennel", "latex", "lua", "markdown", "mermaid", "python", "racket", "rust", "toml", "sql", "tsv", "typst", "vimdoc", "xml", "yaml"}, highlight = {enable = true}}, lazy = false}

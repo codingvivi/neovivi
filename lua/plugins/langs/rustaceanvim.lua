@@ -1,2 +1,2 @@
--- :fennel:1757450404
-return {"mrcjkb/rustaceanvim", version = "^6", lazy = false}
+-- :fennel:1758114918
+return {"mrcjkb/rustaceanvim", version = "^6", dependencies = {"mfussenegger/nvim-dap", "rcarriga/nvim-dap-ui"}, enabled = true, lazy = false}

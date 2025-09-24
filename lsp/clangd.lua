@@ -1,2 +1,2 @@
--- :fennel:1757072780
+-- :fennel:1758729277
 return {cmd = {"clangd", "--background-index", "--clang-tidy"}, filetypes = {"h", "c", "cpp"}, root_markers = {".clangd", ".clang-tidy", ".clang-format", "compile_commands.json", "compile_flags.txt", "configure.ac", ".git"}}

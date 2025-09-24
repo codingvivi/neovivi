@@ -1,4 +1,4 @@
--- :fennel:1753717617
+-- :fennel:1758729277
 local function _1_()
   vim.cmd.colorscheme("oxocarbon")
   local color_keyword = "#78a9ff"

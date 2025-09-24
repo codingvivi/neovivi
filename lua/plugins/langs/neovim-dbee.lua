@@ -1,4 +1,4 @@
--- :fennel:1751306816
+-- :fennel:1758729277
 local function _1_()
   return require("dbee").install
 end

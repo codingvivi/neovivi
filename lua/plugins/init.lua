@@ -1,2 +1,2 @@
--- :fennel:1747434497
+-- :fennel:1758729277
 return {{"udayvir-singh/tangerine.nvim", rtpdirs = {"ftplugin"}, custom = {"./config/nvim/lsp"}, hooks = {"onsave", "oninit"}}, {import = "plugins.ui"}, {import = "plugins.editor"}, {import = "plugins.tools"}, {import = "plugins.langs"}}

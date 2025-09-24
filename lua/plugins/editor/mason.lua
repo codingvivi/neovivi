@@ -1,2 +1,2 @@
--- :fennel:1749565973
+-- :fennel:1758729277
 return {"williamboman/mason.nvim", cmd = {"Mason"}, opts = {registries = {"github:nvim-java/mason-registry", "github:mason-org/mason-registry"}}}

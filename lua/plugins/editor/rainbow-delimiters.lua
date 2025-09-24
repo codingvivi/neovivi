@@ -1,4 +1,4 @@
--- :fennel:1749400791
+-- :fennel:1758729277
 local function _1_()
   local rainbow_delimiters = require("rainbow-delimiters")
   vim.g.rainbow_delimiters = {highlight = {"RainbowDelimiterCyan", "RainbowDelimiterOrange", "RainbowDelimiterBlue", "RainbowDelimiterGreen", "RainbowDelimiterViolet", "RainbowDelimiterYellow", "RainbowDelimiterRed"}}

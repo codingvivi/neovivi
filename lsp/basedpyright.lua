@@ -1,4 +1,4 @@
--- :fennel:1758105053
+-- :fennel:1758729277
 local function _1_(client, bufnr)
   local function _2_()
     local params = {arguments = {vim.uri_from_bufnr(bufnr)}, command = "basedpyright.organizeimports"}

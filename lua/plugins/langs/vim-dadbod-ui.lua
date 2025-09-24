@@ -1,4 +1,4 @@
--- :fennel:1751045644
+-- :fennel:1758729277
 local function _1_()
   vim.g["b_ui_auto_execute_table_helpers"] = 1
   return nil

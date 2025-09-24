@@ -1,4 +1,4 @@
--- :fennel:1758103553
+-- :fennel:1758729277
 local function _1_(ctx)
   return (" " .. ctx.kind_icon .. ctx.icon_gap .. " ")
 end

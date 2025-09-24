@@ -1,4 +1,4 @@
--- :fennel:1754503353
+-- :fennel:1758729277
 vim.keymap.set({"n"}, "<localleader>p", "<cmd>TypstPreview <cr>", {desc = "Start preview", silent = true})
 vim.keymap.set({"n"}, "<localleader>t", "<cmd>TypstPreview <cr>", {desc = "Toggle preview", silent = true})
 vim.keymap.set({"n"}, "<localleader>u", "<cmd>TypstPreviewUpdate <cr>", {desc = "Download/update preview binaries", silent = true})

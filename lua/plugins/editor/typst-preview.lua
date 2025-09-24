@@ -1,4 +1,4 @@
--- :fennel:1755785596
+-- :fennel:1758729277
 local function _1_(path_of_buffer)
   return path_of_buffer
 end

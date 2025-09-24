@@ -1,4 +1,4 @@
--- :fennel:1751037694
+-- :fennel:1758729277
 vim.opt_local["wrap"] = true
 vim.opt_local["linebreak"] = true
 vim.opt_local["breakindent"] = true

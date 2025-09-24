@@ -1,2 +1,2 @@
--- :fennel:1756723433
+-- :fennel:1758729277
 return {cmd = {"tinymist"}, filetypes = {"typst"}, settings = {formatterMode = "typstyle"}}

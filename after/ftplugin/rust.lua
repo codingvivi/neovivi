@@ -1,4 +1,4 @@
--- :fennel:1758640220
+-- :fennel:1758729277
 vim.opt_local["makeprg"] = "cargo build"
 local function _1_()
   return vim.cmd.RustLsp({"hover", "actions"})

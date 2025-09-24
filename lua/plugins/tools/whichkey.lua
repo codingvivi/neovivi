@@ -1,2 +1,2 @@
--- :fennel:1749520469
+-- :fennel:1758729277
 return {"folke/which-key.nvim", dependencies = "nvim-tree/nvim-web-devicons", event = "VeryLazy", opts = {icons = {breadcrumb = "\194\187", separator = "->", group = "+"}, layout = {spacing = 3}, align = "center"}}

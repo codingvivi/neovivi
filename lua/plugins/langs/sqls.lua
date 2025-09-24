@@ -1,2 +1,2 @@
--- :fennel:1750952899
+-- :fennel:1758729277
 return {"nanotee/sqls.nvim"}

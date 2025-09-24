@@ -13,7 +13,7 @@
                ;:icon ""}})
                13 {1 :<leader>m :group "local leader"}
                ;:icon ""}})
-               15 {1 :<leader>cd :group "code dividors"}})
+               15 {1 :<leader>cd :group "code dividers"}})
 
 ;; (local harpoon (require :harpoon)) ;;testing
 
@@ -38,12 +38,12 @@
 ; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ;
 (map! [n] :- "<cmd>Oil<CR>" "Open file browser")
 (table.insert which-key-groups {1 :gr :group "LSP"})
-(map! [n] :grn #(vim.lsp.buf.rename) "Rename symbol")
-(map! [nv] :gra #(vim.lsp.buf.code_action) "Choose code action")
-(map! [n] :grr #(vim.lsp.buf.references) "List symbol refs")
-(map! [n] :gri #(vim.lsp.buf.implementation) "List implementations")
-(map! [n] :grt #(vim.lsp.buf.type_definition) "Goto type definition")
 (map! [n] :gO #(vim.lsp.buf.document_symbol) "List all symbols")
+(map! [nv] :gra #(vim.lsp.buf.code_action) "Choose code action")
+(map! [n] :gri #(vim.lsp.buf.implementation) "List implementations")
+(map! [n] :grn #(vim.lsp.buf.rename) "Rename symbol")
+(map! [n] :grr #(vim.lsp.buf.references) "List symbol refs")
+(map! [n] :grt #(vim.lsp.buf.type_definition) "Goto type definition")
 ; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ;
 ;                               leader mappings                                ;
 ; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ;
@@ -99,6 +99,7 @@
 
 ; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ <leader>h - help ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ;
 (table.insert which-key-groups {1 :<leader>h :group "help (& cmd search)"})
+(map! [n] :<leader>hd #(vim.diagnostic.open_float) "Open full diagnostic")
 (map! [n] :<leader>ht "<cmd>FzfLua colorschemes<CR>"
       "search and preview themes")
 
@@ -114,6 +115,10 @@
 (map! [n] :<leader>lm "<cmd>Mason<CR>" "Open Mason")
 ;; ------------------------------- n - org roam [n]ode -----------------------------
 (table.insert which-key-groups {1 :<leader>n :group "roam"})
+
+; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ p - [p]roject ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ;
+(table.insert which-key-groups {1 :<leader>p :group "project"})
+
 ;; ----------------------------------- o - [o]rg ---------------------------------- 
 (table.insert which-key-groups {1 :<leader>o :group "org"})
 ;; m - local leader

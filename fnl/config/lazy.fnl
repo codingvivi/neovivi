@@ -2,7 +2,6 @@
 ;; Setup package manager
 (require-macros :hibiscus.vim)
 
-
 (let [lazypath (.. (vim.fn.stdpath :data) :/lazy/lazy.nvim)]
   (when (not (vim.loop.fs_stat lazypath))
     (vim.fn.system [:git
@@ -15,7 +14,6 @@
 
 (local lazy (require :lazy))
 
-(lazy.setup [
-             :udayvir-singh/hibiscus.nvim    ;; so lazy manages Hibiscus
+(lazy.setup [:udayvir-singh/hibiscus.nvim
+             ;; so lazy manages Hibiscus
              {:import :plugins}])
-

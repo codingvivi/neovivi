@@ -1,0 +1,2 @@
+-- :fennel:1759275002
+return {{import = "plugins.files.oxocarbon-nvim"}, {import = "plugins.files.transparent-nvim"}, {import = "plugins.files.which-key-nvim"}, {import = "plugins.files.fzf-lua"}, {import = "plugins.files.neogit"}, {import = "plugins.files.oil"}, {import = "plugins.files.blink-cmp"}, {import = "plugins.files.nvim-treesitter"}}

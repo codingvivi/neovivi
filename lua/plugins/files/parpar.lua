@@ -1,2 +1,0 @@
--- :fennel:1758729277
-return {"dundalek/parpar.nvim", ft = {"lisp", "fennel", "clojure", "janet", "racket", "hy", "guile"}, dependencies = {"gpanders/nvim-parinfer", "julienvincent/nvim-paredit"}, opts = {}}

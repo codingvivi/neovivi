@@ -1,0 +1,4 @@
+local function _1_(ctx)
+  return (" " .. ctx.kind_icon .. ctx.icon_gap .. " ")
+end
+return {"saghen/blink.cmp", event = {"InsertEnter", "CmdlineEnter"}, dependencies = {"L3MON4D3/LuaSnip"}, opts = {appearance = {nerd_font_variant = "mono"}, completion = {documentation = {auto_show = false}, menu = {draw = {padding = {0, 0}, components = {kind_icon = {text = _1_}}}}}, fuzzy = {implementation = "prefer_rust_with_warning"}, keymap = {preset = "enter", ["<S-Tab>"] = {"select_prev", "snippet_forward", "fallback"}, ["<Tab>"] = {"select_next", "snippet_backward", "fallback"}}, sources = {default = {"lsp", "path", "snippets", "buffer"}, per_filetype = {sql = {"snippets", "dadbod"}, org = {"orgmode", "buffer"}}, providers = {orgmode = {name = "Orgmode", module = "orgmode.org.autocompletion.blink", fallbacks = {"buffer"}}}}, snippets = {preset = "luasnip"}}, opts_extend = {"sources.default"}, version = "1.*"}

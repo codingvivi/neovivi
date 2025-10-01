@@ -1,2 +1,0 @@
--- :fennel:1758729277
-return {"chipsenkbeil/org-roam.nvim", enabled = true, event = "VeryLazy", dependencies = {"nvim-orgmode/orgmode"}, opts = {directory = "/Users/musicvivireal/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents/org", org_files = {"/Users/musicvivireal/Library/Mobile Documents/iCloud~com~appsonthemove~beorg/Documents/org"}}}

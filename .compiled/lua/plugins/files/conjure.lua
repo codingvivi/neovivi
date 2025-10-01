@@ -1,0 +1,1 @@
+return {"Olical/conjure", lazy = true, ft = {"racket", "fennel", "python"}}

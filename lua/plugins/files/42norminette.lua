@@ -1,2 +1,0 @@
--- :fennel:1758729277
-return {"MrSloth-dev/42-NorminetteNvim", dependencies = {"nvim-lua/plenary.nvim", "echasnovski/mini.icons"}, ft = "C", opts = {show_size = true, norm_keybind = "<localleader>n"}, enabled = false}

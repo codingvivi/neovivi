@@ -1,63 +1,62 @@
--- pick your plugin manager
-local pack = "lazy"
-
-local function bootstrap(url, ref)
-	local name = url:gsub(".*/", "")
-	local path
-
-	if pack == "lazy" then
-		path = vim.fn.stdpath("data") .. "/lazy/" .. name
-		vim.opt.rtp:prepend(path)
-	else
-		path = vim.fn.stdpath("data") .. "/site/pack/" .. pack .. "/start/" .. name
-	end
-
-	if vim.fn.isdirectory(path) == 0 then
-		print(name .. ": installing in data dir...")
-
-		vim.fn.system { "git", "clone", url, path }
-		if ref then
-			vim.fn.system { "git", "-C", path, "checkout", ref }
-		end
-
-		vim.cmd "redraw"
-		print(name .. ": finished installing")
-	end
+local function ensure_installed(plugin, branch)
+  local user, repo = string.match(plugin, "(.+)/(.+)")
+  local repo_path = (vim.fn.stdpath("data") .. "/lazy/" .. repo)
+  if not (vim.uv or vim.loop).fs_stat(repo_path) then
+    vim.notify(("Installing " .. plugin .. " " .. branch))
+    local repo_url = ("https://github.com/" .. plugin .. ".git")
+    local out = vim.fn.system({"git", "clone", "--filter=blob:none", ("--branch=" .. branch), repo_url, repo_path})
+    if (vim.v.shell_error ~= 0) then
+      vim.api.nvim_echo({{("Failed to clone " .. plugin .. ":\n"), "ErrorMsg"}, {out, "WarningMsg"}, {"\nPress any key to exit..."}}, true, {})
+      vim.fn.getchar()
+      os.exit(1)
+    else
+    end
+  else
+  end
+  return repo_path
 end
---vim.lsp.set_log_level("debug") -- Or even "trace" for maximum verbosity
--- for git head
-bootstrap("https://github.com/udayvir-singh/tangerine.nvim")
--- for git head
-bootstrap("https://github.com/udayvir-singh/hibiscus.nvim")
-
-require("tangerine").setup({
-	-- target = vim.fn.stdpath [[data]] .. "/tangerine",
-
-	-- compile files in &rtp
-	rtpdirs = {
-		"ftplugin",
-		"lsp",
-		"after/ftplugin",
-		"~/.hammerspoon"
-
-	},
-
-	compiler = {
-		-- disable popup showing compiled files
-		verbose = false,
-		globals = (function()
-			local default_globals = vim.tbl_keys(_G)      -- Get all keys from Neovim's global table
-
-			table.insert(default_globals, "set-python-path")           -- Add "hs" to that list
-			table.insert(default_globals, "hs")           -- Add "hs" to that list
-			table.insert(default_globals, "wallpaper-index") -- Add "hs" to that list
-			-- You can add more custom globals here if needed in the future
-			-- table.insert(default_globals, "another_custom_global")
-			return default_globals
-		end)(),
-
-		-- compile every time changed are made to fennel files or on entering vim
-		hooks = { "onsave", "oninit" },
-	},
-	keymaps = {},
-})
+local lazy_path = ensure_installed("folke/lazy.nvim", "stable")
+local hotpot_path = ensure_installed("rktjmp/hotpot.nvim", "v0.14.8")
+vim.opt.runtimepath:prepend({hotpot_path, lazy_path})
+vim.loader.enable()
+vim.opt.runtimepath:append("~/.local/share/nvim/lazy/hibiscus.nvim/fnl/")
+do
+  local hotpot = require("hotpot")
+  local setup = hotpot.setup
+  local build = hotpot.api.make.build
+  local uv = vim.loop
+  setup({compiler = {modules = {correlate = true}, macros = {env = "_COMPILER", compilerEnv = _G, allowedGlobals = false}}})
+  local function rebuild_on_save(_3_)
+    local buf = _3_["buf"]
+    local _let_4_ = require("hotpot.api.make")
+    local build0 = _let_4_["build"]
+    local au_config
+    local function _5_()
+      local _6_
+      do
+        local tbl_21_ = {}
+        local i_22_ = 0
+        for n, _ in pairs(_G) do
+          local val_23_ = n
+          if (nil ~= val_23_) then
+            i_22_ = (i_22_ + 1)
+            tbl_21_[i_22_] = val_23_
+          else
+          end
+        end
+        _6_ = tbl_21_
+      end
+      return build0(vim.fn.stdpath("config"), {verbose = true, atomic = true, compiler = {modules = {allowedGlobals = _6_}}}, {{"init.fnl", true}})
+    end
+    au_config = {buffer = buf, callback = _5_}
+    return vim.api.nvim_create_autocmd("BufWritePost", au_config)
+  end
+  vim.api.nvim_create_autocmd("BufRead", {pattern = vim.fs.normalize((vim.fn.stdpath("config") .. "/init.fnl")), callback = rebuild_on_save})
+end
+vim.g.mapleader = " "
+vim.g.maplocalleader = " m"
+require("lazy").setup({performance = {rtp = {paths = {(vim.fn.stdpath("config") .. "/.compiled")}}}, spec = {{"rktjmp/hotpot.nvim", opts = {compiler = {macros = {allowedGlobals = {"vim"}}}}}, {import = "plugins"}}})
+require("config.keymaps")
+require("config.options")
+require("config.lsp")
+return require("config.neovide")

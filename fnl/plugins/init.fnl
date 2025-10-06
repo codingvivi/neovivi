@@ -14,19 +14,19 @@
 
 ;; fnlfmt: skip
 (neovivi! ;:ui 
-          alpha-nvim
+;          alpha-nvim
           gitsigns-nvim
           ;nyoom-modeline
           oxocarbon-nvim 
-          transparent-nvim 
+;          transparent-nvim 
           which-key-nvim
-          rainbow-delimiters-nvim
+;          rainbow-delimiters-nvim
           ;:utils
           conform-nvim
           fzf-lua
           mason-nvim
           neogit
-          neovim-project
+;          neovim-project
           oil-nvim
           ;harpoon
           ;:editor
@@ -35,7 +35,7 @@
           divide-nvim
           nvim-autopairs
           modes-nvim
-          nvim-colorizer
+;          nvim-colorizer
           h42header
           ;:practice
           hardtime
@@ -44,11 +44,11 @@
           nvim-treesitter
           parpar-nvim
           ;:lang.rust
-          rustaceanvim
+;          rustaceanvim
           ;:lang.fennel
           hibiscus-nvim
           ;:lang.orgmode
-          nvim-orgmode
-          org-roam-nvim
+;          nvim-orgmode
+;          org-roam-nvim
           ;:lang.typst
           typst-preview)

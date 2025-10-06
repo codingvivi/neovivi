@@ -1,7 +1,7 @@
 -- ~/.config/nvim/.hotpot.lua
 
 -- Define a list of globals that are allowed for regular modules.
-local allowed_globals = {}
+local allowed_globals = {"hs"}
 for key, _ in pairs(_G) do
   table.insert(allowed_globals, key)
 end

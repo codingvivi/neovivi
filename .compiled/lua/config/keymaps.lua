@@ -1,7 +1,7 @@
 local which_key_groups = {}
 table.insert(which_key_groups, {mode = {"n", "v"}, [3] = {"[", group = "previous"}, [5] = {"]", group = "next"}, [7] = {"g", group = "go"}, [9] = {"z", group = "view, spell"}, [11] = {"<leader>", group = "leader"}, [13] = {"<leader>m", group = "local leader"}, [15] = {"<leader>cd", group = "code dividers"}})
 vim.keymap.set({"n"}, "<esc>", "<esc><cmd>noh<cr>", {desc = "No highlight escape", silent = true})
-vim.keymap.set({"n"}, "-", "<cmd>Oil<CR>", {desc = "Open file browser", silent = true})
+vim.keymap.set({"n"}, "\\", "<cmd>Oil<CR>", {desc = "Open file browser", silent = true})
 table.insert(which_key_groups, {"gr", group = "LSP"})
 local function _1_()
   return vim.lsp.buf.document_symbol()
@@ -75,6 +75,9 @@ vim.keymap.set({"n"}, "<leader>ll", "<cmd>Lazy<CR>", {desc = "Open Lazy", silent
 vim.keymap.set({"n"}, "<leader>lm", "<cmd>Mason<CR>", {desc = "Open Mason", silent = true})
 table.insert(which_key_groups, {"<leader>n", group = "roam"})
 table.insert(which_key_groups, {"<leader>p", group = "project"})
+vim.keymap.set({"n"}, "<leader>pr", "<cmd>NeovimProjectHistory<CR>", {desc = "Open recent project", silent = true})
+vim.keymap.set({"n"}, "<leader>pl", "<cmd>NeovimProjectLoadRecent:<CR>", {desc = "Reopen last opened project", silent = true})
+vim.keymap.set({"n"}, "<leader>pf", "<cmd>NeovimProjectHistory<CR>", {desc = "Open recent project", silent = true})
 table.insert(which_key_groups, {"<leader>o", group = "org"})
 table.insert(which_key_groups, {"<leader>s", group = "search"})
 vim.keymap.set({"n"}, "<leader>sh", "<cmd>FzfLua helptags<CR>", {desc = "Search help tags", silent = true})

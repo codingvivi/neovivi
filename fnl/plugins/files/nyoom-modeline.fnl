@@ -58,12 +58,11 @@
 ;(local lazy (require :lazy))
 ;(when (lazy.get :lewis6991/gitsigns.nvim)
 
-;  (fn get-git-status []
-;    (let [branch (or vim.b.gitsigns_status_dict {:head ""})
-;          is-head-empty (not= branch.head "")]
-;      (or (and is-head-empty
-;               (string.format "(λ • #%s) " (or branch.head "")))
-;          ""))))
+(fn get-git-status []
+  (let [branch (or vim.b.gitsigns_status_dict {:head ""})
+        is-head-empty (not= branch.head "")]
+    (or (and is-head-empty (string.format "(λ • #%s) " (or branch.head "")))
+        "")))
 
 ;; get the number of entries of certain severity
 

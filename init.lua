@@ -55,8 +55,13 @@ do
 end
 vim.g.mapleader = " "
 vim.g.maplocalleader = " m"
-require("lazy").setup({performance = {rtp = {paths = {(vim.fn.stdpath("config") .. "/.compiled")}}}, spec = {{"rktjmp/hotpot.nvim", opts = {compiler = {macros = {allowedGlobals = {"vim"}}}}}, {import = "plugins"}}})
+require("lazy").setup({performance = {rtp = {paths = {(vim.fn.stdpath("config") .. "/.compiled")}}}, spec = {{"rktjmp/hotpot.nvim", opts = {compiler = {macros = {allowedGlobals = {"vim"}}}, enable_hotpot_diagnostics = false}}, {import = "plugins"}}})
+require("plugins.files.nyoom-modeline")
 require("config.keymaps")
 require("config.options")
 require("config.lsp")
-return require("config.neovide")
+if vim.g.neovide then
+  return require("config.neovide")
+else
+  return nil
+end

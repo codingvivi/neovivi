@@ -36,7 +36,7 @@
 ; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ;
 ;                             non-leader mappings                              ;
 ; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ;
-(map! [n] :- "<cmd>Oil<CR>" "Open file browser")
+(map! [n] :\ "<cmd>Oil<CR>" "Open file browser")
 (table.insert which-key-groups {1 :gr :group "LSP"})
 (map! [n] :gO #(vim.lsp.buf.document_symbol) "List all symbols")
 (map! [nv] :gra #(vim.lsp.buf.code_action) "Choose code action")
@@ -118,7 +118,11 @@
 
 ; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ p - [p]roject ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ;
 (table.insert which-key-groups {1 :<leader>p :group "project"})
+(map! [n] :<leader>pr "<cmd>NeovimProjectHistory<CR>" "Open recent project")
+(map! [n] :<leader>pl "<cmd>NeovimProjectLoadRecent:<CR>"
+      "Reopen last opened project")
 
+(map! [n] :<leader>pf "<cmd>NeovimProjectHistory<CR>" "Open recent project")
 ;; ----------------------------------- o - [o]rg ---------------------------------- 
 (table.insert which-key-groups {1 :<leader>o :group "org"})
 ;; m - local leader

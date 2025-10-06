@@ -38,6 +38,11 @@ local function get_fileinfo()
   end
   return ("%#Normal#" .. filename .. "%#NormalNC#")
 end
+local function get_git_status0()
+  local branch = (vim.b.gitsigns_status_dict or {head = ""})
+  local is_head_empty = (branch.head ~= "")
+  return ((is_head_empty and string.format("(\206\187 \226\128\162 #%s) ", (branch.head or ""))) or "")
+end
 local function get_lsp_diagnostic0()
   if not rawget(vim, "lsp") then
     return ""
@@ -69,7 +74,7 @@ local function get_searchcount()
 end
 Statusline = {}
 local function _7_()
-  return table.concat({color(), string.format(" %s ", modes[vim.api.nvim_get_mode().mode]):upper(), get_fileinfo(), get_git_status(), get_bufnr(), "%=", get_lsp_diagnostic0(), get_filetype(), get_searchcount()})
+  return table.concat({color(), string.format(" %s ", modes[vim.api.nvim_get_mode().mode]):upper(), get_fileinfo(), get_git_status0(), get_bufnr(), "%=", get_lsp_diagnostic0(), get_filetype(), get_searchcount()})
 end
 Statusline.statusline = _7_
 vim.opt["laststatus"] = 3

@@ -1,9 +1,11 @@
-(import-macros {: map! : setlocal! : exec!} :hibiscus.vim)
+(import-macros {: map! : setlocal! : setglobal! : exec!} :hibiscus.vim)
 
 ; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ;
 ;                                   settings                                   ;
 ; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ;
 (setlocal! makeprg "cargo build")
+
+(setglobal! conjure#extract#tree_sitter#enabled true)
 
 ;; ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ;
 ;;                                   keymaps                                    ;

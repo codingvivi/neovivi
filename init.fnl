@@ -68,12 +68,16 @@
 ((. (require :lazy) :setup) {:performance {:rtp {:paths [(.. (vim.fn.stdpath :config)
                                                              "/.compiled")]}}
                              :spec [{1 "rktjmp/hotpot.nvim"
-                                     :opts {:compiler {:macros {:allowedGlobals ["vim"]}}}}
+                                     :opts {:enable_hotpot_diagnostics false
+                                            :compiler {:macros {:allowedGlobals ["vim"]}}}}
                                     {:import :plugins}]})
 
+(require :plugins.files.nyoom-modeline)
 ;(require :config.globals)
 
 (require :config.keymaps)
 (require :config.options)
 (require :config.lsp)
-(require :config.neovide)
+
+(when vim.g.neovide
+  (require :config.neovide))

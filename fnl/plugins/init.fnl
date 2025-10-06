@@ -14,8 +14,9 @@
 
 ;; fnlfmt: skip
 (neovivi! ;:ui 
-          ;alpha-nvim
+          alpha-nvim
           gitsigns-nvim
+          ;nyoom-modeline
           oxocarbon-nvim 
           transparent-nvim 
           which-key-nvim
@@ -31,9 +32,11 @@
           ;:editor
           autoclose-nvim
           blink-cmp
+          divide-nvim
           nvim-autopairs
           modes-nvim
-;					42header
+          nvim-colorizer
+          h42header
           ;:practice
           hardtime
 ;					;:lang

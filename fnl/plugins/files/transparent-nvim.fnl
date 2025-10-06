@@ -1,4 +1,5 @@
 {1 :xiyaowong/transparent.nvim
+ :enabled true
  :opts {:groups [:Normal
                  :NormalNC
                  :Comment
@@ -24,4 +25,7 @@
                  :StatusLine
                  :StatusLineNC
                  :EndOfBuffer
-                 :FoldColumn]}}
+                 :FoldColumn]}
+ :config (fn []
+           (vim.api.nvim_set_hl 0 "LspWarnModeline" {:fg "#f1c21b"})
+           (vim.api.nvim_set_hl 0 "LspWarnModeline" {:fg "#fa4d56"}))}

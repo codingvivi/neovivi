@@ -1,1 +1,1 @@
-{1 :lewis6991/gitsigns.nvim :enabled true :opts {}}
+{1 :lewis6991/gitsigns.nvim :event :VeryLazy :enabled true :opts {}}

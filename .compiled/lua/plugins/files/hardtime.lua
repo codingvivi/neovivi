@@ -1,1 +1,1 @@
-return {"m4xshen/hardtime.nvim", enabled = true, dependencies = {"MunifTanjim/nui.nvim"}, opts = {}, lazy = false}
+return {"m4xshen/hardtime.nvim", enabled = true, events = "VeryLazy", dependencies = {"MunifTanjim/nui.nvim"}, opts = {}}

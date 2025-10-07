@@ -1,6 +1,22 @@
+local function get_config_path()
+  local pvim_path = os.getenv("PVIM")
+  if pvim_path then
+    return (pvim_path .. "/../config")
+  else
+    return vim.fn.stdpath("config")
+  end
+end
+local function get_data_path()
+  local pvim_path = os.getenv("PVIM")
+  if pvim_path then
+    return (pvim_path .. "/../data")
+  else
+    return vim.fn.stdpath("data")
+  end
+end
 local function ensure_installed(plugin, branch)
   local user, repo = string.match(plugin, "(.+)/(.+)")
-  local repo_path = (vim.fn.stdpath("data") .. "/lazy/" .. repo)
+  local repo_path = (get_data_path() .. "/lazy/" .. repo)
   if not (vim.uv or vim.loop).fs_stat(repo_path) then
     vim.notify(("Installing " .. plugin .. " " .. branch))
     local repo_url = ("https://github.com/" .. plugin .. ".git")
@@ -26,13 +42,13 @@ do
   local build = hotpot.api.make.build
   local uv = vim.loop
   setup({compiler = {modules = {correlate = true}, macros = {env = "_COMPILER", compilerEnv = _G, allowedGlobals = false}}})
-  local function rebuild_on_save(_3_)
-    local buf = _3_["buf"]
-    local _let_4_ = require("hotpot.api.make")
-    local build0 = _let_4_["build"]
+  local function rebuild_on_save(_5_)
+    local buf = _5_["buf"]
+    local _let_6_ = require("hotpot.api.make")
+    local build0 = _let_6_["build"]
     local au_config
-    local function _5_()
-      local _6_
+    local function _7_()
+      local _8_
       do
         local tbl_21_ = {}
         local i_22_ = 0
@@ -44,11 +60,11 @@ do
           else
           end
         end
-        _6_ = tbl_21_
+        _8_ = tbl_21_
       end
-      return build0(vim.fn.stdpath("config"), {verbose = true, atomic = true, compiler = {modules = {allowedGlobals = _6_}}}, {{"init.fnl", true}})
+      return build0(get_config_path(), {verbose = true, atomic = true, compiler = {modules = {allowedGlobals = _8_}}}, {{"init.fnl", true}})
     end
-    au_config = {buffer = buf, callback = _5_}
+    au_config = {buffer = buf, callback = _7_}
     return vim.api.nvim_create_autocmd("BufWritePost", au_config)
   end
   vim.api.nvim_create_autocmd("BufRead", {pattern = vim.fs.normalize((vim.fn.stdpath("config") .. "/init.fnl")), callback = rebuild_on_save})

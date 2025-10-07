@@ -3,9 +3,21 @@
 ;;(require :config.autocmds)
 
 ;; ~/.config/nvim/init.fnl
+(fn get-config-path []
+  (let [pvim-path (os.getenv "PVIM")]
+    (if pvim-path
+        (.. pvim-path "/../config")
+        (vim.fn.stdpath :config))))
+
+(fn get-data-path []
+  (let [pvim-path (os.getenv "PVIM")]
+    (if pvim-path
+        (.. pvim-path "/../data")
+        (vim.fn.stdpath :data))))
+
 (fn ensure-installed [plugin branch]
   (let [(user repo) (string.match plugin "(.+)/(.+)")
-        repo-path (.. (vim.fn.stdpath :data) :/lazy/ repo)]
+        repo-path (.. (get-data-path) :/lazy/ repo)]
     (when (not ((. (or vim.uv vim.loop) :fs_stat) repo-path))
       (vim.notify (.. "Installing " plugin " " branch))
       (local repo-url (.. "https://github.com/" plugin :.git))
@@ -42,7 +54,7 @@
   (fn rebuild-on-save [{: buf}]
     (let [{: build} (require :hotpot.api.make)
           au-config {:buffer buf
-                     :callback #(build (vim.fn.stdpath :config)
+                     :callback #(build (get-config-path)
                                        {:verbose true
                                         :atomic true
                                         ;; Enforce hard errors when unknown symbols are encountered.
@@ -60,9 +72,9 @@
                                              (vim.fs.normalize))
                                 :callback rebuild-on-save}))
 
+; Yes lazy, i will set them before running your setup, calm down
 (set vim.g.mapleader " ")
 
-; Yes lazy, i will set them before running your setup
 (set vim.g.maplocalleader " m")
 
 ((. (require :lazy) :setup) {:performance {:rtp {:paths [(.. (vim.fn.stdpath :config)

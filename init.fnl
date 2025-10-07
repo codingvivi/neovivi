@@ -15,6 +15,9 @@
         (.. pvim-path "/../data")
         (vim.fn.stdpath :data))))
 
+;; for pvim
+;(vim.opt.runtimepath:prepend (.. (get-config-path) "/.compiled"))
+
 (fn ensure-installed [plugin branch]
   (let [(user repo) (string.match plugin "(.+)/(.+)")
         repo-path (.. (get-data-path) :/lazy/ repo)]
@@ -65,8 +68,8 @@
 
   ;; watch file opens, attach builder if we open the config
   (vim.api.nvim_create_autocmd :BufRead
-                               {:pattern (-> (.. (vim.fn.stdpath :config)
-                                                 :/init.fnl)
+                               ;; for pvim: Use get-config-path instead of stdpath
+                               {:pattern (-> (.. (get-config-path) :/init.fnl)
                                              ;; call realpath if you have some symlink setup
                                              ;; (vim.loop.fs_realpath)
                                              (vim.fs.normalize))
@@ -77,7 +80,8 @@
 
 (set vim.g.maplocalleader " m")
 
-((. (require :lazy) :setup) {:performance {:rtp {:paths [(.. (vim.fn.stdpath :config)
+((. (require :lazy) :setup) {:performance {:rtp {:paths [;for pvim: use get-config-path instead of stdpath
+                                                         (.. (get-config-path)
                                                              "/.compiled")]}}
                              :spec [{1 "rktjmp/hotpot.nvim"
                                      :opts {:enable_hotpot_diagnostics false

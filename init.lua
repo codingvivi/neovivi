@@ -67,11 +67,11 @@ do
     au_config = {buffer = buf, callback = _7_}
     return vim.api.nvim_create_autocmd("BufWritePost", au_config)
   end
-  vim.api.nvim_create_autocmd("BufRead", {pattern = vim.fs.normalize((vim.fn.stdpath("config") .. "/init.fnl")), callback = rebuild_on_save})
+  vim.api.nvim_create_autocmd("BufRead", {pattern = vim.fs.normalize((get_config_path() .. "/init.fnl")), callback = rebuild_on_save})
 end
 vim.g.mapleader = " "
 vim.g.maplocalleader = " m"
-require("lazy").setup({performance = {rtp = {paths = {(vim.fn.stdpath("config") .. "/.compiled")}}}, spec = {{"rktjmp/hotpot.nvim", opts = {compiler = {macros = {allowedGlobals = {"vim"}}}, enable_hotpot_diagnostics = false}}, {import = "plugins"}}})
+require("lazy").setup({performance = {rtp = {paths = {(get_config_path() .. "/.compiled")}}}, spec = {{"rktjmp/hotpot.nvim", opts = {compiler = {macros = {allowedGlobals = {"vim"}}}, enable_hotpot_diagnostics = false}}, {import = "plugins"}}})
 require("plugins.files.nyoom-modeline")
 require("config.keymaps")
 require("config.options")
